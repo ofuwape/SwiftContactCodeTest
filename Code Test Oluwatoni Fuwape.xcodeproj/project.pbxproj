@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
+		6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */; };
+		BE1F1E14D03E729B5896E148 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
+		F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */; };
+		F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */; };
+		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
+		F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64A21C9B74500681E81 /* AppDelegate.swift */; };
+		F78AE64D21C9B74500681E81 /* ContactCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64C21C9B74500681E81 /* ContactCollectionVC.swift */; };
+		F78AE65021C9B74500681E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE64E21C9B74500681E81 /* Main.storyboard */; };
+		F78AE65221C9B74900681E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78AE65121C9B74900681E81 /* Assets.xcassets */; };
+		F78AE65521C9B74900681E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE65321C9B74900681E81 /* LaunchScreen.storyboard */; };
+		F78AE66021C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE65F21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift */; };
+		F78AE66B21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE66A21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeUITests.swift */; };
+		F79F234421CDD49000F296AA /* RealmUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79F234321CDD49000F296AA /* RealmUtil.swift */; };
+		F79F234721CDF8E200F296AA /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = F79F234621CDF8E200F296AA /* contacts.json */; };
+		F79F234921CE037D00F296AA /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79F234821CE037D00F296AA /* ContactViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F78AE65C21C9B74900681E81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F78AE63F21C9B74500681E81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F78AE64621C9B74500681E81;
+			remoteInfo = "Code Test Oluwatoni Fuwape";
+		};
+		F78AE66721C9B74900681E81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F78AE63F21C9B74500681E81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F78AE64621C9B74500681E81;
+			remoteInfo = "Code Test Oluwatoni Fuwape";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		53F30AD6570A0DEDD6EF90CE /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05488B1F9D8388F0595A57E /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; sourceTree = "<group>"; };
+		B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
+		E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
+		F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCollectionCell.xib; sourceTree = "<group>"; };
+		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Oluwatoni Fuwape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F78AE64A21C9B74500681E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F78AE64C21C9B74500681E81 /* ContactCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCollectionVC.swift; sourceTree = "<group>"; };
+		F78AE64F21C9B74500681E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F78AE65121C9B74900681E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F78AE65421C9B74900681E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F78AE65621C9B74900681E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F78AE65B21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Code Test Oluwatoni FuwapeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F78AE65F21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code_Test_Oluwatoni_FuwapeTests.swift; sourceTree = "<group>"; };
+		F78AE66121C9B74900681E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F78AE66621C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Code Test Oluwatoni FuwapeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F78AE66A21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code_Test_Oluwatoni_FuwapeUITests.swift; sourceTree = "<group>"; };
+		F78AE66C21C9B74900681E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79F234321CDD49000F296AA /* RealmUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtil.swift; sourceTree = "<group>"; };
+		F79F234621CDF8E200F296AA /* contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
+		F79F234821CE037D00F296AA /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F78AE64421C9B74500681E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE1F1E14D03E729B5896E148 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F78AE65821C9B74900681E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F78AE66321C9B74900681E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EE23A15967E3B76DF5312A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */,
+				67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */,
+				AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8964FB7F576F07FF9BFA586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */,
+				B05488B1F9D8388F0595A57E /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */,
+				53F30AD6570A0DEDD6EF90CE /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */,
+				E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
+				F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */,
+				6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F74DDA0421CD75B9002905A8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F78AE64C21C9B74500681E81 /* ContactCollectionVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F74DDA0521CD75D6002905A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */,
+				F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F782EDA821C9C22000799BD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F782EDAA21C9C29300799BD9 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F782EDA921C9C23500799BD9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F79F234821CE037D00F296AA /* ContactViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F78AE63E21C9B74500681E81 = {
+			isa = PBXGroup;
+			children = (
+				F78AE64921C9B74500681E81 /* Code Test Oluwatoni Fuwape */,
+				F78AE65E21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests */,
+				F78AE66921C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests */,
+				F78AE64821C9B74500681E81 /* Products */,
+				E8964FB7F576F07FF9BFA586 /* Pods */,
+				5EE23A15967E3B76DF5312A5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F78AE64821C9B74500681E81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */,
+				F78AE65B21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests.xctest */,
+				F78AE66621C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F78AE64921C9B74500681E81 /* Code Test Oluwatoni Fuwape */ = {
+			isa = PBXGroup;
+			children = (
+				F79F234521CDF8C300F296AA /* Resources */,
+				F79F234221CDD43800F296AA /* Util */,
+				F782EDA921C9C23500799BD9 /* ViewModels */,
+				F782EDA821C9C22000799BD9 /* Models */,
+				F78AE64A21C9B74500681E81 /* AppDelegate.swift */,
+				F74DDA0521CD75D6002905A8 /* Views */,
+				F74DDA0421CD75B9002905A8 /* ViewControllers */,
+				F78AE64E21C9B74500681E81 /* Main.storyboard */,
+				F78AE65121C9B74900681E81 /* Assets.xcassets */,
+				F78AE65321C9B74900681E81 /* LaunchScreen.storyboard */,
+				F78AE65621C9B74900681E81 /* Info.plist */,
+			);
+			path = "Code Test Oluwatoni Fuwape";
+			sourceTree = "<group>";
+		};
+		F78AE65E21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F78AE65F21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift */,
+				F78AE66121C9B74900681E81 /* Info.plist */,
+			);
+			path = "Code Test Oluwatoni FuwapeTests";
+			sourceTree = "<group>";
+		};
+		F78AE66921C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F78AE66A21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeUITests.swift */,
+				F78AE66C21C9B74900681E81 /* Info.plist */,
+			);
+			path = "Code Test Oluwatoni FuwapeUITests";
+			sourceTree = "<group>";
+		};
+		F79F234221CDD43800F296AA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F79F234321CDD49000F296AA /* RealmUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F79F234521CDF8C300F296AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F79F234621CDF8E200F296AA /* contacts.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F78AE64621C9B74500681E81 /* Code Test Oluwatoni Fuwape */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F78AE66F21C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni Fuwape" */;
+			buildPhases = (
+				CD2C6C38F67994B45D04463C /* [CP] Check Pods Manifest.lock */,
+				F78AE64321C9B74500681E81 /* Sources */,
+				F78AE64421C9B74500681E81 /* Frameworks */,
+				F78AE64521C9B74500681E81 /* Resources */,
+				EB4A806CAD63F9BCF6218F03 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Code Test Oluwatoni Fuwape";
+			productName = "Code Test Oluwatoni Fuwape";
+			productReference = F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F78AE65A21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F78AE67221C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni FuwapeTests" */;
+			buildPhases = (
+				1EEBCC1CCD84B0915BF5C30D /* [CP] Check Pods Manifest.lock */,
+				F78AE65721C9B74900681E81 /* Sources */,
+				F78AE65821C9B74900681E81 /* Frameworks */,
+				F78AE65921C9B74900681E81 /* Resources */,
+				19B2CBCEB3D2597DB1939158 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F78AE65D21C9B74900681E81 /* PBXTargetDependency */,
+			);
+			name = "Code Test Oluwatoni FuwapeTests";
+			productName = "Code Test Oluwatoni FuwapeTests";
+			productReference = F78AE65B21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F78AE66521C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F78AE67521C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni FuwapeUITests" */;
+			buildPhases = (
+				01D7305035F78580A430C057 /* [CP] Check Pods Manifest.lock */,
+				F78AE66221C9B74900681E81 /* Sources */,
+				F78AE66321C9B74900681E81 /* Frameworks */,
+				F78AE66421C9B74900681E81 /* Resources */,
+				705EBDF569713287845365AB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F78AE66821C9B74900681E81 /* PBXTargetDependency */,
+			);
+			name = "Code Test Oluwatoni FuwapeUITests";
+			productName = "Code Test Oluwatoni FuwapeUITests";
+			productReference = F78AE66621C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F78AE63F21C9B74500681E81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Oluwatoni Fuwape";
+				TargetAttributes = {
+					F78AE64621C9B74500681E81 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F78AE65A21C9B74900681E81 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F78AE64621C9B74500681E81;
+					};
+					F78AE66521C9B74900681E81 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F78AE64621C9B74500681E81;
+					};
+				};
+			};
+			buildConfigurationList = F78AE64221C9B74500681E81 /* Build configuration list for PBXProject "Code Test Oluwatoni Fuwape" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F78AE63E21C9B74500681E81;
+			productRefGroup = F78AE64821C9B74500681E81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F78AE64621C9B74500681E81 /* Code Test Oluwatoni Fuwape */,
+				F78AE65A21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests */,
+				F78AE66521C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F78AE64521C9B74500681E81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79F234721CDF8E200F296AA /* contacts.json in Resources */,
+				F78AE65521C9B74900681E81 /* LaunchScreen.storyboard in Resources */,
+				F78AE65221C9B74900681E81 /* Assets.xcassets in Resources */,
+				F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */,
+				F78AE65021C9B74500681E81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F78AE65921C9B74900681E81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F78AE66421C9B74900681E81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01D7305035F78580A430C057 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni FuwapeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19B2CBCEB3D2597DB1939158 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EEBCC1CCD84B0915BF5C30D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni FuwapeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		705EBDF569713287845365AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD2C6C38F67994B45D04463C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni Fuwape-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB4A806CAD63F9BCF6218F03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F78AE64321C9B74500681E81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */,
+				F79F234921CE037D00F296AA /* ContactViewModel.swift in Sources */,
+				F78AE64D21C9B74500681E81 /* ContactCollectionVC.swift in Sources */,
+				F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */,
+				F79F234421CDD49000F296AA /* RealmUtil.swift in Sources */,
+				F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F78AE65721C9B74900681E81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F78AE66021C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F78AE66221C9B74900681E81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F78AE66B21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F78AE65D21C9B74900681E81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F78AE64621C9B74500681E81 /* Code Test Oluwatoni Fuwape */;
+			targetProxy = F78AE65C21C9B74900681E81 /* PBXContainerItemProxy */;
+		};
+		F78AE66821C9B74900681E81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F78AE64621C9B74500681E81 /* Code Test Oluwatoni Fuwape */;
+			targetProxy = F78AE66721C9B74900681E81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F78AE64E21C9B74500681E81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F78AE64F21C9B74500681E81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F78AE65321C9B74900681E81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F78AE65421C9B74900681E81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F78AE66D21C9B74900681E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F78AE66E21C9B74900681E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F78AE67021C9B74900681E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Code Test Oluwatoni Fuwape/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fuwape.Code-Test-Oluwatoni-Fuwape";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F78AE67121C9B74900681E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B05488B1F9D8388F0595A57E /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Code Test Oluwatoni Fuwape/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fuwape.Code-Test-Oluwatoni-Fuwape";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F78AE67321C9B74900681E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53F30AD6570A0DEDD6EF90CE /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56PZRC5XTJ;
+				INFOPLIST_FILE = "Code Test Oluwatoni FuwapeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fuwape.Code-Test-Oluwatoni-FuwapeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Code Test Oluwatoni Fuwape.app/Code Test Oluwatoni Fuwape";
+			};
+			name = Debug;
+		};
+		F78AE67421C9B74900681E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56PZRC5XTJ;
+				INFOPLIST_FILE = "Code Test Oluwatoni FuwapeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fuwape.Code-Test-Oluwatoni-FuwapeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Code Test Oluwatoni Fuwape.app/Code Test Oluwatoni Fuwape";
+			};
+			name = Release;
+		};
+		F78AE67621C9B74900681E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56PZRC5XTJ;
+				INFOPLIST_FILE = "Code Test Oluwatoni FuwapeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fuwape.Code-Test-Oluwatoni-FuwapeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Code Test Oluwatoni Fuwape";
+			};
+			name = Debug;
+		};
+		F78AE67721C9B74900681E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56PZRC5XTJ;
+				INFOPLIST_FILE = "Code Test Oluwatoni FuwapeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fuwape.Code-Test-Oluwatoni-FuwapeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Code Test Oluwatoni Fuwape";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F78AE64221C9B74500681E81 /* Build configuration list for PBXProject "Code Test Oluwatoni Fuwape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F78AE66D21C9B74900681E81 /* Debug */,
+				F78AE66E21C9B74900681E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F78AE66F21C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni Fuwape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F78AE67021C9B74900681E81 /* Debug */,
+				F78AE67121C9B74900681E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F78AE67221C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni FuwapeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F78AE67321C9B74900681E81 /* Debug */,
+				F78AE67421C9B74900681E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F78AE67521C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni FuwapeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F78AE67621C9B74900681E81 /* Debug */,
+				F78AE67721C9B74900681E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F78AE63F21C9B74500681E81 /* Project object */;
+}

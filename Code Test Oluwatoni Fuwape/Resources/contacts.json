@@ -1,0 +1,26 @@
+[
+    {
+        "firstname": "John",
+        "lastname": "Coltrane",
+        "dateOfBirth": "September 23, 1926",
+        "emails": "john.colt@gmail.com",
+        "addresses": "9007 Fountain Avenue",
+        "phoneNumbers": "2345674567"
+    },
+    {
+        "firstname": "Miles",
+        "lastname": "Davis",
+        "dateOfBirth": "May 26, 1926",
+        "emails": "miles.d@jhu.edu",
+        "addresses": "Jake Street SE",
+        "phoneNumbers": "2345234567"
+    },
+    {
+        "firstname": "Duke",
+        "lastname": "Ellington",
+        "dateOfBirth": "April 29, 1899",
+        "emails": "duke.ellington@yahoo.com",
+        "addresses": "Zebra Street NW",
+        "phoneNumbers": "3456784567"
+    }
+]
