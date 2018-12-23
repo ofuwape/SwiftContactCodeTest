@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 
 class ContactCollectionVC: UICollectionViewController, RealmUtilDelegate {
     
@@ -18,12 +20,15 @@ class ContactCollectionVC: UICollectionViewController, RealmUtilDelegate {
     fileprivate let numOfSections: Int = 1
     fileprivate let realmUtil: RealmUtils = RealmUtils()
     fileprivate var contactResults: [ContactViewModel]=[]
+    fileprivate var searchHeaderView: SearchCollectionReusableView?
+    fileprivate var disposeBag: DisposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "ContactCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ContactCell")
         realmUtil.fetchAll(realmDelegate: self)
     }
+    
     
     // MARK: - RealmUtilDelegate
     func foundResults(searchResults: Results<Contact>) {
@@ -33,6 +38,8 @@ class ContactCollectionVC: UICollectionViewController, RealmUtilDelegate {
         }
         DispatchQueue.main.async {
             self.collectionView.reloadData()
+            self.searchHeaderView?.searchBar.becomeFirstResponder()
+            
         }
     }
 }
@@ -83,4 +90,32 @@ extension ContactCollectionVC : UICollectionViewDelegateFlowLayout {
         return sectionInsets.left
     }
 }
+    
+// MARK: - HeaderView
+extension ContactCollectionVC {
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if (kind == UICollectionView.elementKindSectionHeader) {
+            let headerView:UICollectionReusableView =  collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionViewHeader", for: indexPath)
+            
+            if let searchHeaderView =  headerView as? SearchCollectionReusableView{
+                searchHeaderView.searchBar
+                    .rx.text // Observable property thanks to RxCocoa
+                    .orEmpty // Make it non-optional
+                    .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
+                    .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+                    .filter { !$0.isEmpty } // If the new value is really new, filter for non-empty query.
+                    .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value, that is not empty (thanks to filter above).
+                        self.realmUtil.fetchByQuery(realmDelegate: self,query: searchHeaderView.searchBar.text?.lowercased() ?? "")
+                    })
+                    .disposed(by: disposeBag)
+            }
+            return headerView
+        }
+        
+        return UICollectionReusableView()
+        
+    }
+}
+
 

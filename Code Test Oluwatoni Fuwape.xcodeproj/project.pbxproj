@@ -10,6 +10,7 @@
 		148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
 		6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */; };
 		BE1F1E14D03E729B5896E148 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
+		F74B5AC621CF182100F2ED53 /* SearchCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC521CF182100F2ED53 /* SearchCollectionReusableView.swift */; };
 		F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */; };
 		F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
@@ -52,6 +53,7 @@
 		B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
 		E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F74B5AC521CF182100F2ED53 /* SearchCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionReusableView.swift; sourceTree = "<group>"; };
 		F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCollectionCell.xib; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */,
 				F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */,
+				F74B5AC521CF182100F2ED53 /* SearchCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */,
 				F79F234421CDD49000F296AA /* RealmUtil.swift in Sources */,
 				F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */,
+				F74B5AC621CF182100F2ED53 /* SearchCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
