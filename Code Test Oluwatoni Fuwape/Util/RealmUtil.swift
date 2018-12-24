@@ -63,13 +63,26 @@ class RealmUtils{
                 contact.dateOfBirth = dateFormatter.date(from: contactDict["dateOfBirth"] ?? "")
                 
                 if let addresses = contactDict["addresses"]{
-                    contact.addresses?.append(objectsIn: addresses.components(separatedBy: "|"))
+                    for add in addresses.components(separatedBy: "|"){
+                        let addModel: AddressModel  = AddressModel()
+                        addModel.text = add
+                      contact.addresses?.append(addModel)
+                    }
                 }
+                
                 if let phoneNumbers = contactDict["phoneNumbers"]{
-                    contact.phoneNumbers?.append(objectsIn: phoneNumbers.components(separatedBy: "|"))
+                    for phoneNum in phoneNumbers.components(separatedBy: "|"){
+                        let phoneNumModel: PhoneNumberModel  = PhoneNumberModel()
+                        phoneNumModel.text = phoneNum
+                        contact.phoneNumbers?.append(phoneNumModel)
+                    }
                 }
                 if let emails = contactDict["emails"]{
-                    contact.emails?.append(objectsIn: emails.components(separatedBy: "|"))
+                    for email in emails.components(separatedBy: "|"){
+                        let emailModel: EmailModel  = EmailModel()
+                        emailModel.text = email
+                        contact.emails?.append(emailModel)
+                    }
                 }
                 
                 realm.add(contact)
@@ -77,12 +90,6 @@ class RealmUtils{
             }
         }
         try! realm.commitWrite()
-        //        // Print all contacts from realm
-        //        for contact: Contact? in Cont {
-        //            if let aContact = contact {
-        //                print("contact persisted to realm: \(aContact)")
-        //            }
-        //        }
     }
     
     func fetchAll(realmDelegate: RealmUtilDelegate){
@@ -90,26 +97,49 @@ class RealmUtils{
         DispatchQueue.global().async {
             autoreleasepool {
                 let realm = try! Realm()
-                realmDelegate.foundResults(searchResults: realm.objects(Contact.self))
+                realmDelegate.foundResults(searchResults: realm.objects(Contact.self).sorted(byKeyPath: "firstname", ascending: true))
             }
         }
     }
+    
+    // Removes non alphanumeric input and trims spaces
+    func formatQuery(query: String)-> String{
+        let unsafeChars = NSCharacterSet.alphanumerics.inverted
+        return query.components(separatedBy: unsafeChars).joined(separator:"").trimmingCharacters(in: .whitespacesAndNewlines)
+    }
         
     func fetchByQuery(realmDelegate: RealmUtilDelegate, query: String){
+        let mQuery: String = formatQuery(query: query)
         DispatchQueue.global().async {
             autoreleasepool {
                 let realm = try! Realm()
-                let queryFormat: String = String(format: "firstname contains '%@' OR lastname contains '%@'", query,query)
-                let queryPredicate: NSPredicate = NSPredicate(format: queryFormat)
-
-                let results = realm.objects(Contact.self).filter(queryPredicate)
-                realmDelegate.foundResults(searchResults: results)
+                
+                let nameQuery: String = String(format: "firstname contains[cd] '%@' OR lastname contains[cd] '%@'", mQuery,mQuery)
+                let nameResults = self.getResultsForQuery(realm: realm, queryPredicate: nameQuery)
+               
+                let emailQuery: String = String(format: "any emails.text contains[cd] '%@'", mQuery)
+                let emailResults = self.getResultsForQuery(realm: realm, queryPredicate: emailQuery)
+                
+                let addQuery: String = String(format: "any addresses.text contains[cd] '%@'", mQuery)
+                let addResults = self.getResultsForQuery(realm: realm, queryPredicate: addQuery)
+                
+                let phoneNumQuery: String = String(format: "any phoneNumbers.text contains[cd] '%@'", mQuery)
+                let phoneNumResults = self.getResultsForQuery(realm: realm, queryPredicate: phoneNumQuery)
+                
+                
+                realmDelegate.foundResults(query: mQuery, nameResults: nameResults, addressResults: addResults, phoneNumResults: phoneNumResults, emailResults: emailResults)
             }
         }
+    }
+    
+    func getResultsForQuery(realm: Realm, queryPredicate: String) -> Results<Contact>{
+        let queryPredicate: NSPredicate = NSPredicate(format: queryPredicate)
+        return realm.objects(Contact.self).filter(queryPredicate).sorted(byKeyPath: "firstname", ascending: true)
     }
     
 }
 
 protocol RealmUtilDelegate: class {
     func foundResults(searchResults: Results<Contact>)
+    func foundResults(query: String, nameResults: Results<Contact>, addressResults: Results<Contact>, phoneNumResults: Results<Contact>, emailResults: Results<Contact>)
 }

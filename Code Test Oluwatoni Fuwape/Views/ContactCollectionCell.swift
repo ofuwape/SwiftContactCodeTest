@@ -12,4 +12,6 @@ import UIKit
 class ContactCollectionCell: UICollectionViewCell{
         
     @IBOutlet var contactLabel: UILabel!
+    @IBOutlet var detailLabel: UILabel!
+    @IBOutlet var mainLabel: UILabel!
 }

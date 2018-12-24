@@ -10,12 +10,14 @@
 		148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
 		6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */; };
 		BE1F1E14D03E729B5896E148 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
-		F74B5AC621CF182100F2ED53 /* SearchCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC521CF182100F2ED53 /* SearchCollectionReusableView.swift */; };
+		F74B5AC821D0028500F2ED53 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC721D0028400F2ED53 /* ContactViewController.swift */; };
+		F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */; };
+		F74B5ACC21D04A6300F2ED53 /* PhoneNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */; };
+		F74B5ACE21D04A7200F2ED53 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5ACD21D04A7200F2ED53 /* AddressModel.swift */; };
 		F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */; };
 		F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
 		F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64A21C9B74500681E81 /* AppDelegate.swift */; };
-		F78AE64D21C9B74500681E81 /* ContactCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64C21C9B74500681E81 /* ContactCollectionVC.swift */; };
 		F78AE65021C9B74500681E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE64E21C9B74500681E81 /* Main.storyboard */; };
 		F78AE65221C9B74900681E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78AE65121C9B74900681E81 /* Assets.xcassets */; };
 		F78AE65521C9B74900681E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE65321C9B74900681E81 /* LaunchScreen.storyboard */; };
@@ -53,13 +55,15 @@
 		B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
 		E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F74B5AC521CF182100F2ED53 /* SearchCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionReusableView.swift; sourceTree = "<group>"; };
+		F74B5AC721D0028400F2ED53 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
+		F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberModel.swift; sourceTree = "<group>"; };
+		F74B5ACD21D04A7200F2ED53 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCollectionCell.xib; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Oluwatoni Fuwape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78AE64A21C9B74500681E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F78AE64C21C9B74500681E81 /* ContactCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCollectionVC.swift; sourceTree = "<group>"; };
 		F78AE64F21C9B74500681E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F78AE65121C9B74900681E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F78AE65421C9B74900681E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,7 +133,7 @@
 		F74DDA0421CD75B9002905A8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F78AE64C21C9B74500681E81 /* ContactCollectionVC.swift */,
+				F74B5AC721D0028400F2ED53 /* ContactViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -139,7 +143,6 @@
 			children = (
 				F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */,
 				F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */,
-				F74B5AC521CF182100F2ED53 /* SearchCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				F782EDAA21C9C29300799BD9 /* Contact.swift */,
+				F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */,
+				F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */,
+				F74B5ACD21D04A7200F2ED53 /* AddressModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -529,12 +535,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */,
+				F74B5AC821D0028500F2ED53 /* ContactViewController.swift in Sources */,
 				F79F234921CE037D00F296AA /* ContactViewModel.swift in Sources */,
-				F78AE64D21C9B74500681E81 /* ContactCollectionVC.swift in Sources */,
 				F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */,
+				F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */,
+				F74B5ACE21D04A7200F2ED53 /* AddressModel.swift in Sources */,
+				F74B5ACC21D04A6300F2ED53 /* PhoneNumberModel.swift in Sources */,
 				F79F234421CDD49000F296AA /* RealmUtil.swift in Sources */,
 				F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */,
-				F74B5AC621CF182100F2ED53 /* SearchCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

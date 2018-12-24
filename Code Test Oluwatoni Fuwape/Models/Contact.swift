@@ -13,8 +13,8 @@ class Contact: Object{
     @objc dynamic var firstname: String? = ""
     @objc dynamic var lastname: String? = ""
     @objc dynamic var dateOfBirth: Date? = nil
-    var addresses: List<String>? = List<String>()
-    var phoneNumbers: List<String>? = List<String>()
-    var emails: List<String>? = List<String>()
+    var addresses: List<AddressModel>? = List<AddressModel>()
+    var phoneNumbers: List<PhoneNumberModel>? = List<PhoneNumberModel>()
+    var emails: List<EmailModel>? = List<EmailModel>()
     
 }
