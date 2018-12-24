@@ -33,9 +33,18 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
         super.viewDidLoad()
         setupViewResizerOnKeyboardShown()
         setupSearchBar()
+        configureAddButton()
         self.collectionView.register(UINib(nibName: "ContactCollectionCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         self.title = "Contacts"
         realmUtil.fetchAll(realmDelegate: self)
+    }
+    
+    func configureAddButton(){
+        self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewContact)), animated: true)
+    }
+    
+    @objc func addNewContact(){
+        // implement
     }
     
     // MARK: - SetUpSearchBar
@@ -114,4 +123,16 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
         
     }
     
+}
+
+extension ContactViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        openDetailController(contactViewModel:  contactResults[indexPath.row])
+    }
+    
+    func openDetailController(contactViewModel: ContactViewModel){
+        let detailController:DetailContactViewController = DetailContactViewController()
+        detailController.contactVM = contactViewModel
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
 }

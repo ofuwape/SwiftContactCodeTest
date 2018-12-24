@@ -10,6 +10,8 @@
 		148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
 		6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */; };
 		BE1F1E14D03E729B5896E148 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
+		DF201AB0C500628DAF47E83F /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D4974743885259E49475D6 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
+		E6BD1BABC5AE4F3A242F820A /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12CDC3E1FEE07D8272A635 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */; };
 		F74B5AC821D0028500F2ED53 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC721D0028400F2ED53 /* ContactViewController.swift */; };
 		F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */; };
 		F74B5ACC21D04A6300F2ED53 /* PhoneNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */; };
@@ -18,6 +20,11 @@
 		F74B5AD321D112FF00F2ED53 /* ContactViewController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AD221D112FF00F2ED53 /* ContactViewController+UICollectionViewDelegateFlowLayout.swift */; };
 		F74B5AD521D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AD421D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift */; };
 		F74B5AE521D11D7C00F2ED53 /* ContactViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AE421D11D7C00F2ED53 /* ContactViewModelTest.swift */; };
+		F74B5AE721D145EF00F2ED53 /* DetailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AE621D145EF00F2ED53 /* DetailContactViewController.swift */; };
+		F74B5AE921D146E900F2ED53 /* DetailContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74B5AE821D146E900F2ED53 /* DetailContactView.xib */; };
+		F74B5AEB21D1470700F2ED53 /* DetailContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AEA21D1470700F2ED53 /* DetailContactView.swift */; };
+		F74B5AEF21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AEE21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift */; };
+		F74B5AF121D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AF021D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift */; };
 		F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */; };
 		F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
@@ -50,13 +57,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40D4974743885259E49475D6 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C12CDC3E1FEE07D8272A635 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F30AD6570A0DEDD6EF90CE /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57460431CA9D5780F4107512 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D4679EACEC99B2CEEC85FAA /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9367C97535333DEF2A9AFD87 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05488B1F9D8388F0595A57E /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; sourceTree = "<group>"; };
 		B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
+		DE7B8D30DDF28E9EA05DEDF0 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F74B5AC721D0028400F2ED53 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +80,11 @@
 		F74B5AD221D112FF00F2ED53 /* ContactViewController+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactViewController+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		F74B5AD421D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		F74B5AE421D11D7C00F2ED53 /* ContactViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModelTest.swift; sourceTree = "<group>"; };
+		F74B5AE621D145EF00F2ED53 /* DetailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactViewController.swift; sourceTree = "<group>"; };
+		F74B5AE821D146E900F2ED53 /* DetailContactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailContactView.xib; sourceTree = "<group>"; };
+		F74B5AEA21D1470700F2ED53 /* DetailContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactView.swift; sourceTree = "<group>"; };
+		F74B5AEE21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailContactViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		F74B5AF021D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailContactViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCollectionCell.xib; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -101,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
+				E6BD1BABC5AE4F3A242F820A /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */,
+				DF201AB0C500628DAF47E83F /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +141,8 @@
 				71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */,
 				67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */,
 				AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */,
+				4C12CDC3E1FEE07D8272A635 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */,
+				40D4974743885259E49475D6 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +156,10 @@
 				E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
 				F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */,
 				6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */,
+				57460431CA9D5780F4107512 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */,
+				9367C97535333DEF2A9AFD87 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
+				DE7B8D30DDF28E9EA05DEDF0 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */,
+				7D4679EACEC99B2CEEC85FAA /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -141,17 +167,36 @@
 		F74B5ACF21D111A300F2ED53 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F74B5AED21D17C8E00F2ED53 /* DetailContactViewController */,
+				F74B5AEC21D17C7700F2ED53 /* ContactViewController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F74B5AEC21D17C7700F2ED53 /* ContactViewController */ = {
+			isa = PBXGroup;
+			children = (
 				F74B5AD021D111D100F2ED53 /* ContactViewController+Keyboard.swift */,
 				F74B5AD221D112FF00F2ED53 /* ContactViewController+UICollectionViewDelegateFlowLayout.swift */,
 				F74B5AD421D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift */,
 			);
-			path = Extensions;
+			path = ContactViewController;
+			sourceTree = "<group>";
+		};
+		F74B5AED21D17C8E00F2ED53 /* DetailContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F74B5AEE21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift */,
+				F74B5AF021D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift */,
+			);
+			path = DetailContactViewController;
 			sourceTree = "<group>";
 		};
 		F74DDA0421CD75B9002905A8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F74B5AC721D0028400F2ED53 /* ContactViewController.swift */,
+				F74B5AE621D145EF00F2ED53 /* DetailContactViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +206,8 @@
 			children = (
 				F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */,
 				F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */,
+				F74B5AE821D146E900F2ED53 /* DetailContactView.xib */,
+				F74B5AEA21D1470700F2ED53 /* DetailContactView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,6 +419,7 @@
 			files = (
 				F79F234721CDF8E200F296AA /* contacts.json in Resources */,
 				F78AE65521C9B74900681E81 /* LaunchScreen.storyboard in Resources */,
+				F74B5AE921D146E900F2ED53 /* DetailContactView.xib in Resources */,
 				F78AE65221C9B74900681E81 /* Assets.xcassets in Resources */,
 				F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */,
 				F78AE65021C9B74500681E81 /* Main.storyboard in Resources */,
@@ -558,6 +606,8 @@
 				F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */,
 				F74B5AC821D0028500F2ED53 /* ContactViewController.swift in Sources */,
 				F79F234921CE037D00F296AA /* ContactViewModel.swift in Sources */,
+				F74B5AEB21D1470700F2ED53 /* DetailContactView.swift in Sources */,
+				F74B5AF121D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift in Sources */,
 				F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */,
 				F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */,
 				F74B5ACE21D04A7200F2ED53 /* AddressModel.swift in Sources */,
@@ -565,7 +615,9 @@
 				F74B5AD121D111D100F2ED53 /* ContactViewController+Keyboard.swift in Sources */,
 				F74B5ACC21D04A6300F2ED53 /* PhoneNumberModel.swift in Sources */,
 				F79F234421CDD49000F296AA /* RealmUtil.swift in Sources */,
+				F74B5AEF21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift in Sources */,
 				F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */,
+				F74B5AE721D145EF00F2ED53 /* DetailContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

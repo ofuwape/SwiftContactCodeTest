@@ -11,16 +11,17 @@ import RealmSwift
 
 struct ContactViewModel {
     
-    var firstname: String?
-    var lastname: String?
-    var fullName: String
+    var firstname: String? = ""
+    var lastname: String? = ""
+    var dOB: String = ""
+    var fullName: String = ""
     
     var hasMatchedDetail: Bool = false
     var matchedDetail: NSMutableAttributedString = NSMutableAttributedString()
     
-    var addresses: List<AddressModel>? = List<AddressModel>()
-    var phoneNumbers: List<PhoneNumberModel>? = List<PhoneNumberModel>()
-    var emails: List<EmailModel>? = List<EmailModel>()
+    var addresses: [String]? = []
+    var phoneNumbers: [String]? = []
+    var emails: [String]? = []
     
 }
 
@@ -29,16 +30,34 @@ extension ContactViewModel {
     init(contact :Contact) {
         self.firstname = contact.firstname
         self.lastname = contact.lastname
-        self.addresses = contact.addresses
-        self.phoneNumbers = contact.phoneNumbers
-        self.emails = contact.emails
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        if let date = contact.dateOfBirth{
+          self.dOB = dateFormatter.string(from: date)
+        }
+        
+        let addressItems: [AddressModel] = Array(contact.addresses ?? List())
+        self.addresses = addressItems.map { addressItem in
+            return addressItem.text
+        }
+        
+        let phoneNumItems: [PhoneNumberModel] = Array(contact.phoneNumbers ?? List())
+        self.phoneNumbers = phoneNumItems.map { phoneNumItem in
+            return phoneNumItem.text
+        }
+        
+        let emailItems: [EmailModel] = Array(contact.emails ?? List())
+        self.emails = emailItems.map { emailItem in
+            return emailItem.text
+        }
+        
         self.fullName = String(format: "%@ %@",contact.firstname ?? "",contact.lastname ?? "")
     }
     
     init(contact :Contact, query: String, foundAddress: Bool, foundPhoneNumber: Bool, foundEmail: Bool) {
         self.init(contact: contact)
         setUpMatchedDetail(query: query, foundAddress: foundAddress,foundPhoneNumber: foundPhoneNumber, foundEmail: foundEmail)
-    
     }
     
     fileprivate func getAttributedDetail(query: String, detailText: String) -> NSMutableAttributedString{
@@ -61,9 +80,9 @@ extension ContactViewModel {
     fileprivate mutating func setUpMatchedDetail(query: String, foundAddress: Bool, foundPhoneNumber: Bool, foundEmail: Bool){
         
         if foundEmail, let emails = self.emails {
-            for email: EmailModel in emails{
-                if email.text.range(of:query) != nil {
-                    self.matchedDetail = getAttributedDetail(query: query, detailText: email.text)
+            for email: String in emails{
+                if email.lowercased().range(of:query) != nil {
+                    self.matchedDetail = getAttributedDetail(query: query, detailText: email.lowercased())
                     self.hasMatchedDetail = true
                     return
                 }
@@ -71,9 +90,9 @@ extension ContactViewModel {
         }
         
         if foundPhoneNumber, let phoneNumbers = self.phoneNumbers {
-            for phoneNum: PhoneNumberModel in phoneNumbers{
-                if phoneNum.text.range(of:query) != nil {
-                    self.matchedDetail = getAttributedDetail(query: query, detailText: phoneNum.text)
+            for phoneNum: String in phoneNumbers{
+                if phoneNum.lowercased().range(of:query) != nil {
+                    self.matchedDetail = getAttributedDetail(query: query, detailText: phoneNum.lowercased())
                     self.hasMatchedDetail = true
                     return
                 }
@@ -81,9 +100,9 @@ extension ContactViewModel {
         }
         
         if foundAddress, let addresses = self.addresses {
-            for add: AddressModel in addresses{
-                if add.text.range(of:query) != nil {
-                    self.matchedDetail = getAttributedDetail(query: query, detailText: add.text)
+            for add: String in addresses{
+                if add.lowercased().range(of:query) != nil {
+                    self.matchedDetail = getAttributedDetail(query: query, detailText: add.lowercased())
                     self.hasMatchedDetail = true
                     return
                 }
