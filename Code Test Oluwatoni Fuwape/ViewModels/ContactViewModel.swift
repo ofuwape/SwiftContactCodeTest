@@ -16,7 +16,7 @@ struct ContactViewModel {
     var fullName: String
     
     var hasMatchedDetail: Bool = false
-    var matchedDetail: String = ""
+    var matchedDetail: NSMutableAttributedString = NSMutableAttributedString()
     
     var addresses: List<AddressModel>? = List<AddressModel>()
     var phoneNumbers: List<PhoneNumberModel>? = List<PhoneNumberModel>()
@@ -41,12 +41,29 @@ extension ContactViewModel {
     
     }
     
+    fileprivate func getAttributedDetail(query: String, detailText: String) -> NSMutableAttributedString{
+        let attrStr = NSMutableAttributedString(string: detailText)
+        let inputLength = attrStr.string.count
+        let searchString = query
+        let searchLength = searchString.count
+        var range = NSRange(location: 0, length: attrStr.length)
+        
+        while (range.location != NSNotFound) {
+            range = (attrStr.string as NSString).range(of: searchString, options: [], range: range)
+            if (range.location != NSNotFound) {
+                attrStr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.black, range: NSRange(location: range.location, length: searchLength))
+                range = NSRange(location: range.location + range.length, length: inputLength - (range.location + range.length))
+            }
+        }
+        return attrStr
+    }
+    
     fileprivate mutating func setUpMatchedDetail(query: String, foundAddress: Bool, foundPhoneNumber: Bool, foundEmail: Bool){
         
         if foundEmail, let emails = self.emails {
             for email: EmailModel in emails{
                 if email.text.range(of:query) != nil {
-                    self.matchedDetail = email.text
+                    self.matchedDetail = getAttributedDetail(query: query, detailText: email.text)
                     self.hasMatchedDetail = true
                     return
                 }
@@ -56,7 +73,7 @@ extension ContactViewModel {
         if foundPhoneNumber, let phoneNumbers = self.phoneNumbers {
             for phoneNum: PhoneNumberModel in phoneNumbers{
                 if phoneNum.text.range(of:query) != nil {
-                    self.matchedDetail = phoneNum.text
+                    self.matchedDetail = getAttributedDetail(query: query, detailText: phoneNum.text)
                     self.hasMatchedDetail = true
                     return
                 }
@@ -66,7 +83,7 @@ extension ContactViewModel {
         if foundAddress, let addresses = self.addresses {
             for add: AddressModel in addresses{
                 if add.text.range(of:query) != nil {
-                    self.matchedDetail = add.text
+                    self.matchedDetail = getAttributedDetail(query: query, detailText: add.text)
                     self.hasMatchedDetail = true
                     return
                 }

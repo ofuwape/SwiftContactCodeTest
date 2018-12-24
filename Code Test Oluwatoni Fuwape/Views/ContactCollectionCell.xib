@@ -23,7 +23,6 @@
                         <constraint firstAttribute="height" constant="30" id="8LD-I5-qh2"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYy-uo-C8t">
@@ -40,7 +39,6 @@
                     <rect key="frame" x="2" y="21" width="371" height="644"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

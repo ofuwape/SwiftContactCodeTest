@@ -123,7 +123,7 @@ extension ContactViewController: UICollectionViewDataSource{
         cell.mainLabel.isHidden = false
         cell.mainLabel.text = contactVM.fullName
         cell.contactLabel.text = contactVM.fullName
-        cell.detailLabel.text = contactVM.matchedDetail
+        cell.detailLabel.attributedText = contactVM.matchedDetail
         
         if contactVM.hasMatchedDetail{
             cell.mainLabel.isHidden = true
