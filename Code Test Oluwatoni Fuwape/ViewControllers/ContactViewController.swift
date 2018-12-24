@@ -26,9 +26,11 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
-
+    @IBOutlet var noResultsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewResizerOnKeyboardShown()
         setupSearchBar()
         self.collectionView.register(UINib(nibName: "ContactCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ContactCell")
         self.title = "Contacts"
@@ -42,7 +44,6 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
             .orEmpty // Make it non-optional
             .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
             .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
-//            .filter { !$0.isEmpty } // If the new value is really new, filter for non-empty query.
             .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value, that is not empty (thanks to filter above).
                 if query.isEmpty && !self.hasDefaultResult {
                     self.hasDefaultResult = true
@@ -55,6 +56,14 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
             .disposed(by: disposeBag)
     }
     
+    func configEmptyView() {
+        if contactResults.count==0 && (searchBar.text?.count ?? 0) > 1{
+            noResultsLabel.isHidden = false
+        }else{
+            noResultsLabel.isHidden = true
+        }
+    }
+    
     // MARK: - RealmUtilDelegate
     func foundResults(searchResults: Results<Contact>) {
         let contactItems: [Contact] = Array(searchResults)
@@ -62,6 +71,7 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
             return ContactViewModel(contact :contactItem)
         }
         DispatchQueue.main.async {
+            self.configEmptyView()
             self.collectionView.reloadData()
         }
     }
@@ -96,10 +106,12 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
         contactResults = results
         
         DispatchQueue.main.async {
+            self.configEmptyView()
             self.collectionView.reloadData()
         }
         
     }
+    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -160,5 +172,45 @@ extension ContactViewController : UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
+    }
+}
+
+//MARK: - Listen for Keyboard Changes
+extension ContactViewController {
+    func setupViewResizerOnKeyboardShown() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShowForResizing),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHideForResizing),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+    
+    @objc func keyboardWillShowForResizing(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+            let window = self.view.window?.frame {
+            // We're not just minusing the kb height from the view height because
+            // the view could already have been resized for the keyboard before
+            self.view.frame = CGRect(x: self.view.frame.origin.x,
+                                     y: self.view.frame.origin.y,
+                                     width: self.view.frame.width,
+                                     height: window.origin.y + window.height - keyboardSize.height)
+        } else {
+            debugPrint("We're showing the keyboard and either the keyboard size or window is nil: panic widely.")
+        }
+    }
+    
+    @objc func keyboardWillHideForResizing(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let viewHeight = self.view.frame.height
+            self.view.frame = CGRect(x: self.view.frame.origin.x,
+                                     y: self.view.frame.origin.y,
+                                     width: self.view.frame.width,
+                                     height: viewHeight + keyboardSize.height)
+        } else {
+            debugPrint("We're about to hide the keyboard and the keyboard size is nil. Now is the rapture.")
+        }
     }
 }

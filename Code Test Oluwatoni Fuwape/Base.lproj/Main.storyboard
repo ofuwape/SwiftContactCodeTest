@@ -43,21 +43,32 @@
                                 </connections>
                             </collectionView>
                             <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-0U-MUk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="54"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdZ-bn-wAB">
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bNB-7z-t8b" firstAttribute="top" secondItem="jEn-0U-MUk" secondAttribute="bottom" constant="-2" id="2Xs-lp-hvR"/>
+                            <constraint firstItem="bNB-7z-t8b" firstAttribute="top" secondItem="jEn-0U-MUk" secondAttribute="bottom" id="2Xs-lp-hvR"/>
+                            <constraint firstItem="mdZ-bn-wAB" firstAttribute="bottom" secondItem="bNB-7z-t8b" secondAttribute="bottom" id="3uK-DP-cUY"/>
                             <constraint firstItem="bNB-7z-t8b" firstAttribute="leading" secondItem="fPv-Mt-hlw" secondAttribute="leading" id="4xy-PI-e6N"/>
                             <constraint firstItem="fPv-Mt-hlw" firstAttribute="bottom" secondItem="bNB-7z-t8b" secondAttribute="bottom" id="7Lw-g9-Nez"/>
                             <constraint firstItem="bNB-7z-t8b" firstAttribute="centerX" secondItem="fPv-Mt-hlw" secondAttribute="centerX" id="9wB-zt-LdN"/>
+                            <constraint firstItem="mdZ-bn-wAB" firstAttribute="top" secondItem="bNB-7z-t8b" secondAttribute="top" id="FPj-j1-YQ0"/>
                             <constraint firstItem="jEn-0U-MUk" firstAttribute="centerX" secondItem="fPv-Mt-hlw" secondAttribute="centerX" id="I10-0I-Y2S"/>
                             <constraint firstItem="bNB-7z-t8b" firstAttribute="top" secondItem="fPv-Mt-hlw" secondAttribute="top" constant="54" id="ODF-Hm-8QV"/>
                             <constraint firstItem="jEn-0U-MUk" firstAttribute="leading" secondItem="fPv-Mt-hlw" secondAttribute="leading" id="QZc-Ah-lyi"/>
                             <constraint firstItem="fPv-Mt-hlw" firstAttribute="trailing" secondItem="jEn-0U-MUk" secondAttribute="trailing" id="Qme-iq-jbI"/>
                             <constraint firstItem="jEn-0U-MUk" firstAttribute="top" secondItem="fPv-Mt-hlw" secondAttribute="top" id="aM4-Tg-sMM"/>
+                            <constraint firstItem="mdZ-bn-wAB" firstAttribute="leading" secondItem="bNB-7z-t8b" secondAttribute="leading" id="npa-xa-NtI"/>
+                            <constraint firstItem="mdZ-bn-wAB" firstAttribute="trailing" secondItem="bNB-7z-t8b" secondAttribute="trailing" id="tZK-tV-FWz"/>
                             <constraint firstItem="fPv-Mt-hlw" firstAttribute="trailing" secondItem="bNB-7z-t8b" secondAttribute="trailing" id="tfG-5c-60S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fPv-Mt-hlw"/>
@@ -65,6 +76,7 @@
                     <navigationItem key="navigationItem" id="ZPH-Qr-2tg"/>
                     <connections>
                         <outlet property="collectionView" destination="bNB-7z-t8b" id="oz6-14-T1W"/>
+                        <outlet property="noResultsLabel" destination="mdZ-bn-wAB" id="1jD-1w-Bux"/>
                         <outlet property="searchBar" destination="jEn-0U-MUk" id="DLe-X3-94v"/>
                     </connections>
                 </viewController>
