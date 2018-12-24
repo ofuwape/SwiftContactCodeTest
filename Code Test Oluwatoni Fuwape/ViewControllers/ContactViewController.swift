@@ -16,11 +16,12 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
     
     // MARK: - Properties
     fileprivate let reuseIdentifier = "ContactCell"
-    fileprivate let sectionInsets = UIEdgeInsets(top: 2.0, left: 2.0, bottom: 2.0, right: 2.0)
-    fileprivate let itemsPerRow: CGFloat = 1
-    fileprivate let numOfSections: Int = 1
+    let sectionInsets = UIEdgeInsets(top: 2.0, left: 2.0, bottom: 2.0, right: 2.0)
+    let itemsPerRow: CGFloat = 1
+    let numOfSections: Int = 1
+    var contactResults: [ContactViewModel]=[]
+    
     fileprivate let realmUtil: RealmUtils = RealmUtils()
-    fileprivate var contactResults: [ContactViewModel]=[]
     fileprivate var disposeBag: DisposeBag = DisposeBag()
     fileprivate var hasDefaultResult = true
     
@@ -32,7 +33,7 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
         super.viewDidLoad()
         setupViewResizerOnKeyboardShown()
         setupSearchBar()
-        self.collectionView.register(UINib(nibName: "ContactCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ContactCell")
+        self.collectionView.register(UINib(nibName: "ContactCollectionCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         self.title = "Contacts"
         realmUtil.fetchAll(realmDelegate: self)
     }
@@ -40,11 +41,11 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
     // MARK: - SetUpSearchBar
     func setupSearchBar(){
         self.searchBar
-            .rx.text // Observable property thanks to RxCocoa
-            .orEmpty // Make it non-optional
-            .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
-            .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
-            .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value, that is not empty (thanks to filter above).
+            .rx.text
+            .orEmpty
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [unowned self] query in
                 if query.isEmpty && !self.hasDefaultResult {
                     self.hasDefaultResult = true
                     self.realmUtil.fetchAll(realmDelegate: self)
@@ -64,16 +65,20 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
         }
     }
     
+    fileprivate func reloadPage() {
+        DispatchQueue.main.async {
+            self.configEmptyView()
+            self.collectionView.reloadData()
+        }
+    }
+    
     // MARK: - RealmUtilDelegate
     func foundResults(searchResults: Results<Contact>) {
         let contactItems: [Contact] = Array(searchResults)
         contactResults = contactItems.map { contactItem in
             return ContactViewModel(contact :contactItem)
         }
-        DispatchQueue.main.async {
-            self.configEmptyView()
-            self.collectionView.reloadData()
-        }
+        reloadPage()
     }
     
     func foundResults(query: String, nameResults: Results<Contact>, addressResults: Results<Contact>, phoneNumResults: Results<Contact>, emailResults: Results<Contact>){
@@ -105,112 +110,8 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
         results = results.sorted(by:{$0.firstname! < $1.firstname!})
         contactResults = results
         
-        DispatchQueue.main.async {
-            self.configEmptyView()
-            self.collectionView.reloadData()
-        }
+        reloadPage()
         
     }
     
-}
-
-// MARK: - UICollectionViewDataSource
-extension ContactViewController: UICollectionViewDataSource{
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return numOfSections
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
-        return contactResults.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ContactCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContactCell", for: indexPath) as! ContactCollectionCell
-        cell.backgroundColor = UIColor.lightGray
-        let contactVM: ContactViewModel = contactResults[indexPath.item]
-        
-        cell.mainLabel.isHidden = false
-        cell.mainLabel.text = contactVM.fullName
-        cell.contactLabel.text = contactVM.fullName
-        cell.detailLabel.attributedText = contactVM.matchedDetail
-        
-        if contactVM.hasMatchedDetail{
-            cell.mainLabel.isHidden = true
-            cell.contactLabel.isHidden = false
-            cell.detailLabel.isHidden = false
-        }else{
-            cell.mainLabel.isHidden = false
-            cell.contactLabel.isHidden = true
-            cell.detailLabel.isHidden = true
-        }
-        return cell
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension ContactViewController : UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
-        
-        return CGSize(width: widthPerItem, height: 62)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
-    }
-}
-
-//MARK: - Listen for Keyboard Changes
-extension ContactViewController {
-    func setupViewResizerOnKeyboardShown() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShowForResizing),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHideForResizing),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
-    }
-    
-    @objc func keyboardWillShowForResizing(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
-            let window = self.view.window?.frame {
-            // We're not just minusing the kb height from the view height because
-            // the view could already have been resized for the keyboard before
-            self.view.frame = CGRect(x: self.view.frame.origin.x,
-                                     y: self.view.frame.origin.y,
-                                     width: self.view.frame.width,
-                                     height: window.origin.y + window.height - keyboardSize.height)
-        } else {
-            debugPrint("We're showing the keyboard and either the keyboard size or window is nil: panic widely.")
-        }
-    }
-    
-    @objc func keyboardWillHideForResizing(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let viewHeight = self.view.frame.height
-            self.view.frame = CGRect(x: self.view.frame.origin.x,
-                                     y: self.view.frame.origin.y,
-                                     width: self.view.frame.width,
-                                     height: viewHeight + keyboardSize.height)
-        } else {
-            debugPrint("We're about to hide the keyboard and the keyboard size is nil. Now is the rapture.")
-        }
-    }
 }
