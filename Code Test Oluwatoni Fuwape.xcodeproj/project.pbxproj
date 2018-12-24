@@ -17,6 +17,7 @@
 		F74B5AD121D111D100F2ED53 /* ContactViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AD021D111D100F2ED53 /* ContactViewController+Keyboard.swift */; };
 		F74B5AD321D112FF00F2ED53 /* ContactViewController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AD221D112FF00F2ED53 /* ContactViewController+UICollectionViewDelegateFlowLayout.swift */; };
 		F74B5AD521D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AD421D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift */; };
+		F74B5AE521D11D7C00F2ED53 /* ContactViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AE421D11D7C00F2ED53 /* ContactViewModelTest.swift */; };
 		F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */; };
 		F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
@@ -65,6 +66,7 @@
 		F74B5AD021D111D100F2ED53 /* ContactViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		F74B5AD221D112FF00F2ED53 /* ContactViewController+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactViewController+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		F74B5AD421D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		F74B5AE421D11D7C00F2ED53 /* ContactViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModelTest.swift; sourceTree = "<group>"; };
 		F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCollectionCell.xib; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		F78AE65E21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests */ = {
 			isa = PBXGroup;
 			children = (
+				F74B5AE421D11D7C00F2ED53 /* ContactViewModelTest.swift */,
 				F78AE65F21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift */,
 				F78AE66121C9B74900681E81 /* Info.plist */,
 			);
@@ -571,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78AE66021C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift in Sources */,
+				F74B5AE521D11D7C00F2ED53 /* ContactViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

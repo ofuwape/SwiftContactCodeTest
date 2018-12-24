@@ -11,4 +11,12 @@ import RealmSwift
 
 class EmailModel: Object{
     @objc dynamic var text: String = ""
+
+}
+
+extension EmailModel{
+    convenience init(emailText: String) {
+        self.init()
+        self.text = emailText
+    }
 }

@@ -12,3 +12,10 @@ import RealmSwift
 class AddressModel: Object{
     @objc dynamic var text: String = ""
 }
+
+extension AddressModel{
+    convenience init(addText: String) {
+        self.init()
+        self.text = addText
+    }
+}

@@ -12,3 +12,10 @@ import RealmSwift
 class PhoneNumberModel: Object{
     @objc dynamic var text: String = ""
 }
+
+extension PhoneNumberModel{
+    convenience init(phoneNumText: String) {
+        self.init()
+        self.text = phoneNumText
+    }
+}
