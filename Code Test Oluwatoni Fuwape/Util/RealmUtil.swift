@@ -140,9 +140,56 @@ class RealmUtils{
         return realm.objects(Contact.self).filter(queryPredicate).sorted(byKeyPath: "firstname", ascending: true)
     }
     
+    func fechItem(id: String, delegate: RealmUtilSingleFetchDelegate){
+        DispatchQueue.global().async {
+            autoreleasepool {
+                let realm = try! Realm()
+                let contact = realm.object(ofType: Contact.self, forPrimaryKey: id)
+                delegate.foundItem(contact: contact)
+            }
+        }
+    }
+    
+    func deleteItem(id: String, delegate: RealmUtilSaveDeleteDelegate){
+        DispatchQueue.global().async {
+            autoreleasepool {
+                let realm = try! Realm()
+                if let contact = realm.object(ofType: Contact.self, forPrimaryKey: id){
+                    realm.beginWrite()
+                    realm.delete(contact)
+                    try! realm.commitWrite()
+                    delegate.deleteComplete()
+                }
+            }
+        }
+    }
+    
+    func saveItem(contactVM: ContactViewModel, delegate: RealmUtilSaveDeleteDelegate){
+        DispatchQueue.global().async {
+            autoreleasepool {
+                var contact: Contact = Contact()
+                contact = contact.fromContactViewModel(contactVM: contactVM)
+                let realm = try! Realm()
+                realm.beginWrite()
+                realm.add(contact)
+                try! realm.commitWrite()
+                delegate.saveComplete()
+            }
+        }
+    }
+    
 }
 
 protocol RealmUtilDelegate: class {
     func foundResults(searchResults: Results<Contact>)
     func foundResults(query: String, nameResults: Results<Contact>, addressResults: Results<Contact>, phoneNumResults: Results<Contact>, emailResults: Results<Contact>)
+}
+
+protocol RealmUtilSaveDeleteDelegate: class {
+    func deleteComplete()
+    func saveComplete()
+}
+
+protocol RealmUtilSingleFetchDelegate: class {
+    func foundItem(contact: Contact?)
 }

@@ -33,6 +33,7 @@
 		F77C76B121D3BB3600AA92C1 /* UpdateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B021D3BB3600AA92C1 /* UpdateCellView.swift */; };
 		F77C76B321D3BB5D00AA92C1 /* UpdateCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F77C76B221D3BB5D00AA92C1 /* UpdateCellView.xib */; };
 		F77C76B621D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */; };
+		F77C76B821D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B721D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
 		F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64A21C9B74500681E81 /* AppDelegate.swift */; };
 		F78AE65021C9B74500681E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE64E21C9B74500681E81 /* Main.storyboard */; };
@@ -99,6 +100,7 @@
 		F77C76B021D3BB3600AA92C1 /* UpdateCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCellView.swift; sourceTree = "<group>"; };
 		F77C76B221D3BB5D00AA92C1 /* UpdateCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCellView.xib; sourceTree = "<group>"; };
 		F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateContactViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		F77C76B721D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateContactViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Oluwatoni Fuwape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78AE64A21C9B74500681E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */,
+				F77C76B721D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift */,
 			);
 			path = UpdateContactViewController;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				F74B5AF721D1B8E200F2ED53 /* UpdateContactView.swift in Sources */,
 				F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */,
 				F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */,
+				F77C76B821D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift in Sources */,
 				F74B5ACE21D04A7200F2ED53 /* AddressModel.swift in Sources */,
 				F77C76B621D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift in Sources */,
 				F74B5AD521D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift in Sources */,

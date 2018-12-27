@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+
 struct ContactViewModel {
     
     var firstname: String = ""
@@ -22,6 +23,7 @@ struct ContactViewModel {
     var addresses: [String] = []
     var phoneNumbers: [String] = []
     var emails: [String] = []
+    var primaryKey: String = ""
     
 }
 
@@ -30,6 +32,9 @@ extension ContactViewModel {
     init(contact :Contact) {
         self.firstname = contact.firstname ?? ""
         self.lastname = contact.lastname ?? ""
+        self.fullName = String(format: "%@ %@",contact.firstname ?? "",contact.lastname ?? "")
+
+        self.primaryKey = contact.id
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, yyyy"
@@ -51,8 +56,6 @@ extension ContactViewModel {
         self.emails = emailItems.map { emailItem in
             return emailItem.text
         }
-        
-        self.fullName = String(format: "%@ %@",contact.firstname ?? "",contact.lastname ?? "")
     }
     
     init(contact :Contact, query: String, foundAddress: Bool, foundPhoneNumber: Bool, foundEmail: Bool) {
@@ -61,11 +64,19 @@ extension ContactViewModel {
     }
     
     func hasRequiredData()-> Bool{
-        return !trimText(text: firstname).isEmpty && trimText(text: lastname).isEmpty && !emails.isEmpty && !phoneNumbers.isEmpty
+        return !trimText(text: firstname).isEmpty && !trimText(text: lastname).isEmpty && !emails.isEmpty && !phoneNumbers.isEmpty && !dOB.isEmpty
     }
     
     func isSame(newContactVM: ContactViewModel)-> Bool{
-        return newContactVM.firstname == self.firstname && newContactVM.lastname == self.lastname && newContactVM.emails == self.emails && newContactVM.phoneNumbers == self.phoneNumbers && newContactVM.addresses == self.addresses;
+        return newContactVM.firstname == self.firstname
+            && newContactVM.lastname == self.lastname
+            && sameLists(itemsI: self.emails, itemsII: newContactVM.emails)
+            && sameLists(itemsI: self.phoneNumbers, itemsII: newContactVM.phoneNumbers)
+            && sameLists(itemsI: self.addresses, itemsII: newContactVM.addresses)
+    }
+    
+    func sameLists(itemsI: [String], itemsII: [String]) -> Bool {
+        return itemsI.filter{ !$0.isEmpty } == itemsII.filter{ !$0.isEmpty }
     }
     
     

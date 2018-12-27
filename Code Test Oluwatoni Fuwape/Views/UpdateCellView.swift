@@ -26,16 +26,19 @@ class UpdateCellView: UITableViewCell{
     }
     
     func setAddImage() {
+        buttonImageView.contentMode = UIView.ContentMode.scaleAspectFit
         buttonImageView.image = addImage
+        buttonImageView.isUserInteractionEnabled = false
     }
     
     func setRemoveImage() {
         buttonImageView.contentMode = UIView.ContentMode.scaleAspectFit
         buttonImageView.image = removeImage
+        buttonImageView.isUserInteractionEnabled = true
     }
     
     func clearImage() {
-        buttonImageView.contentMode = UIView.ContentMode.scaleAspectFit
         buttonImageView.image = nil
+        buttonImageView.isUserInteractionEnabled = false
     }
 }

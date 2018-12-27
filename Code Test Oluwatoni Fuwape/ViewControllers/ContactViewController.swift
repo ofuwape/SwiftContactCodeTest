@@ -36,7 +36,15 @@ class ContactViewController: KeyboardListenerVC, RealmUtilDelegate {
         configureAddButton()
         self.collectionView.register(UINib(nibName: "ContactCollectionCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         self.title = "Contacts"
-        realmUtil.fetchAll(realmDelegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if searchBar.text?.isEmpty ?? true{
+            realmUtil.fetchAll(realmDelegate: self)
+        }else{
+            self.realmUtil.fetchByQuery(realmDelegate: self,query: self.searchBar.text?.lowercased() ?? "")
+        }
     }
     
     func configureAddButton(){
@@ -44,7 +52,10 @@ class ContactViewController: KeyboardListenerVC, RealmUtilDelegate {
     }
     
     @objc func addNewContact(){
-        // implement
+        let updateController: UpdateContactViewController = UpdateContactViewController()
+        updateController.isNewContact = true
+        let navController = UINavigationController(rootViewController: updateController)
+        self.present(navController, animated: true, completion: nil)
     }
     
     // MARK: - SetUpSearchBar

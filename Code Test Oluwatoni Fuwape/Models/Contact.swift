@@ -13,9 +13,15 @@ class Contact: Object{
     @objc dynamic var firstname: String? = ""
     @objc dynamic var lastname: String? = ""
     @objc dynamic var dateOfBirth: Date? = nil
+    @objc dynamic var id: String = NSUUID().uuidString
+    
     var addresses: List<AddressModel>? = List<AddressModel>()
     var phoneNumbers: List<PhoneNumberModel>? = List<PhoneNumberModel>()
     var emails: List<EmailModel>? = List<EmailModel>()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
     func fromContactViewModel(contactVM: ContactViewModel) -> Contact{
         self.firstname = contactVM.firstname
@@ -30,6 +36,7 @@ class Contact: Object{
         self.addresses?.append(objectsIn:  Array(contactVM.addresses).map { addItem in
             return AddressModel(addText: addItem)
         })
+        self.id = contactVM.primaryKey
         return self
     }
     

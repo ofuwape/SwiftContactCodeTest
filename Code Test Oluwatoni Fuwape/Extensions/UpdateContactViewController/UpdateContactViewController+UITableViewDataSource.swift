@@ -14,14 +14,16 @@ extension UpdateContactViewController: UITableViewDataSource{
     
     func getPlaceHolders( section: Int) -> [String] {
         switch section {
+        case UpdateSectionType.Name.rawValue:
+            return ["FirstName","LastName"]
         case UpdateSectionType.PhoneNum.rawValue:
-            return ["Add Phone Number"]
+            return ["Phone Number"]
         case UpdateSectionType.Email.rawValue:
-            return ["Add Email"]
+            return ["Email"]
         case UpdateSectionType.Address.rawValue:
-            return ["Add Address"]
+            return ["Address"]
         case UpdateSectionType.DOB.rawValue:
-            return ["Add BirthDate"]
+            return ["Pick BirthDate"]
         default:
             return []
         }
@@ -39,6 +41,8 @@ extension UpdateContactViewController: UITableViewDataSource{
             return self.contactVM.addresses
         case UpdateSectionType.DOB.rawValue:
             return [contactVM.dOB]
+        case UpdateSectionType.DOB.rawValue:
+            return ["Delete Contact"]
         default:
             return []
         }
@@ -62,6 +66,9 @@ extension UpdateContactViewController: UITableViewDataSource{
         case UpdateSectionType.DOB.rawValue:
             numRows = 1
             break
+        case UpdateSectionType.DeleteContact.rawValue:
+            numRows =  isNewContact ? 0 : 1
+            break
         default:
             break
         }
@@ -78,44 +85,97 @@ extension UpdateContactViewController: UITableViewDataSource{
     func listenToTextField(cell: UpdateCellView, indexPath: IndexPath){
         cell.textField.rx.controlEvent([.editingChanged])
             .asObservable()
+            .debounce(0.5, scheduler: MainScheduler.instance)
             .subscribe({ _ in
-                print("editing state changed section ->"+String(indexPath.section)+" ->"+String(indexPath.row))
+                self.updateContactField(text: cell.textField.text ?? "",indexPath: indexPath)
             })
             .disposed(by: cell.disposeBag)
+    }
+    
+    func listenToDelete(cell: UpdateCellView, indexPath: IndexPath){
+        let tapGest = UITapGestureRecognizer()
+        cell.buttonImageView.addGestureRecognizer(tapGest)
+        tapGest.rx.event
+            .asObservable()
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .subscribe({_ in
+                print("section-> "+String(indexPath.section)+" row-> "+String(indexPath.row))
+                self.removeRow(currentIndex: indexPath.row, section: indexPath.section)
+            })
+            .disposed(by: cell.disposeBag)
+    }
+    
+    func updateContactField(text: String, indexPath: IndexPath){
+        switch indexPath.section {
+        case UpdateSectionType.Name.rawValue:
+            if indexPath.row == 0{
+                contactVM.firstname = text
+            }else{
+                contactVM.lastname = text
+            }
+            break
+        case UpdateSectionType.PhoneNum.rawValue:
+            contactVM.phoneNumbers[indexPath.row] = text
+            break
+        case UpdateSectionType.Email.rawValue:
+            contactVM.emails[indexPath.row] = text
+            break
+        case UpdateSectionType.Address.rawValue:
+            contactVM.addresses[indexPath.row] = text
+            break
+        default:
+            break
+        }
     }
     
     func configureCell(cell: UpdateCellView, indexPath: IndexPath) {
         let placeHolderText: [String] = getPlaceHolders(section: indexPath.section)
         let cellText: [String] = getCellTextList(section: indexPath.section)
-        listenToTextField(cell: cell, indexPath: indexPath)
         if indexPath.section == UpdateSectionType.Name.rawValue {
-            let currentCellText: String = cellText[indexPath.row]
-            if cellText.isEmpty{
-                cell.textField.placeholder = currentCellText
-            }else{
+            cell.textField.placeholder = placeHolderText[indexPath.row]
+            if !cellText.isEmpty{
                 cell.textField?.text = cellText[indexPath.row]
             }
         }else{
+            cell.textField.placeholder = placeHolderText[0]
             if indexPath.row >= cellText.count{
-                cell.textField.placeholder = placeHolderText[0]
                 cell.textField.isUserInteractionEnabled = false
+                cell.textField.placeholder = "Add "+placeHolderText[0]
                 cell.setAddImage()
             }else{
-                cell.textField.text = cellText[indexPath.row]
-                cell.setRemoveImage()
+                let currentCellText: String = cellText[indexPath.row]
+                if !currentCellText.isEmpty{
+                    cell.textField.text = currentCellText
+                }
+                if indexPath.section != UpdateSectionType.DOB.rawValue {
+                    cell.setRemoveImage()
+                }
                 cell.textField.isUserInteractionEnabled = !(indexPath.section == UpdateSectionType.DOB.rawValue)
             }
         }
+        listenToTextField(cell: cell, indexPath: indexPath)
+        listenToDelete(cell: cell, indexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : UpdateCellView!
-        cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? UpdateCellView
-        cell.prepareForReuse()
-        cell.selectionStyle = .none
-        clearCell(cell: cell)
-        configureCell(cell: cell, indexPath: indexPath)
-        return cell
+        if indexPath.section == UpdateSectionType.DeleteContact.rawValue {
+            var cell : UITableViewCell!
+            cell = tableView.dequeueReusableCell(withIdentifier: deleteCellIdentifier)
+            if cell == nil {
+                cell = UITableViewCell(style: .default, reuseIdentifier: deleteCellIdentifier)
+            }
+            cell.textLabel?.textColor = UIColor.red
+            cell.textLabel?.text = "Delete Contact"
+            cell.textLabel?.textAlignment = .center
+            return cell
+        }else{
+            var cell : UpdateCellView!
+            cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? UpdateCellView
+            cell.selectionStyle = .none
+            clearCell(cell: cell)
+            configureCell(cell: cell, indexPath: indexPath)
+            return cell
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int{
@@ -123,7 +183,7 @@ extension UpdateContactViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
-        return "    "
+        return " "
     }
     
 }

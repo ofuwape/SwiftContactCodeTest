@@ -15,6 +15,7 @@ class DetailContactViewController: UIViewController{
     var contactVM: ContactViewModel?
     let numOfSections: Int = 4 // PhoneNums, Emails, Address, Birthday
     let cellIdentifier = "DetailCell"
+    let realmUtil = RealmUtils()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,13 @@ class DetailContactViewController: UIViewController{
         configureDetailView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let contactId = contactVM?.primaryKey{
+            realmUtil.fechItem(id: contactId, delegate: self)
+        }
+    }
+    
     override func loadView() {
         self.detailContactView = DetailContactView.fromNib()
         self.view = self.detailContactView
@@ -31,9 +39,13 @@ class DetailContactViewController: UIViewController{
     
     func configureDetailView(){
         configureEditButton()
+        detailContactView?.detailTableView.tableFooterView = UIView() // remove empty cells
+        configureData()
+    }
+    
+    func configureData() {
         detailContactView?.fullNameLabel.text = contactVM?.fullName
         detailContactView?.detailTableView.reloadData()
-        detailContactView?.detailTableView.tableFooterView = UIView() // remove empty cells
     }
     
     func configureEditButton(){
@@ -45,6 +57,19 @@ class DetailContactViewController: UIViewController{
         updateController.contactVM = contactVM ?? ContactViewModel()
         let navController = UINavigationController(rootViewController: updateController)
         self.present(navController, animated: true, completion: nil)
+    }
+    
+}
+
+extension DetailContactViewController: RealmUtilSingleFetchDelegate{
+    
+    func foundItem(contact: Contact?) {
+        if let mContact = contact{
+            contactVM = ContactViewModel.init(contact: mContact)
+            DispatchQueue.main.async {
+                self.configureData()
+            }
+        }
     }
     
 }
