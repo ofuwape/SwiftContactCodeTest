@@ -89,9 +89,7 @@ class RealmUtils{
     
     static func stringToDate(dateText: String) -> Date {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
         dateFormatter.dateFormat = "MMMM dd, yyyy"
-        dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone
         return dateFormatter.date(from: dateText) ?? Date()
     }
     
@@ -170,11 +168,32 @@ class RealmUtils{
                 var contact: Contact = Contact()
                 contact = contact.fromContactViewModel(contactVM: contactVM)
                 let realm = try! Realm()
-                if !isNew, let contactFound = realm.object(ofType: Contact.self, forPrimaryKey: contactVM.primaryKey){
-                    contact.id = contactFound.id
-                }
                 realm.beginWrite()
-                realm.add(contact)
+                if !isNew, let contactFound = realm.object(ofType: Contact.self, forPrimaryKey: contactVM.primaryKey){
+                    contactFound.firstname = contact.firstname
+                    contactFound.lastname = contact.lastname
+                    contactFound.dateOfBirth = contact.dateOfBirth
+                    
+                    contactFound.emails?.removeAll()
+                    contactFound.emails?.append(objectsIn:  Array(contactVM.emails.filter{ !$0.isEmpty } ).map { emailItem in
+                        return EmailModel(emailText: emailItem)
+                    })
+                    
+                    contactFound.phoneNumbers?.removeAll()
+                    contactFound.phoneNumbers?.append(objectsIn:  Array(contactVM.phoneNumbers.filter{ !$0.isEmpty } ).map { phoneItem in
+                        return PhoneNumberModel(phoneNumText: phoneItem)
+                    })
+                    
+                    contactFound.addresses?.removeAll()
+                    contactFound.addresses?.append(objectsIn:  Array(contactVM.addresses.filter{ !$0.isEmpty } ).map { addItem in
+                        return AddressModel(addText: addItem)
+                    })
+                    
+                    
+                    realm.add(contactFound)
+                }else{
+                    realm.add(contact)
+                }
                 try! realm.commitWrite()
                 delegate.saveComplete()
             }

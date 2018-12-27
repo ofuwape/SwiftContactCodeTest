@@ -73,6 +73,7 @@ extension ContactViewModel {
     func isSame(newContactVM: ContactViewModel)-> Bool{
         return newContactVM.firstname == self.firstname
             && newContactVM.lastname == self.lastname
+            && newContactVM.dOB == self.dOB
             && sameLists(itemsI: self.emails, itemsII: newContactVM.emails)
             && sameLists(itemsI: self.phoneNumbers, itemsII: newContactVM.phoneNumbers)
             && sameLists(itemsI: self.addresses, itemsII: newContactVM.addresses)

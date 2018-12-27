@@ -67,6 +67,9 @@ class UpdateContactViewController: KeyboardListenerVC{
         
         datePicker.isHidden = true
         datePicker.backgroundColor = UIColor.gray
+        if !isNewContact{
+            datePicker.date = RealmUtils.stringToDate(dateText: contactVM.dOB)
+        }
         self.view.addSubview(datePicker)
     }
     
