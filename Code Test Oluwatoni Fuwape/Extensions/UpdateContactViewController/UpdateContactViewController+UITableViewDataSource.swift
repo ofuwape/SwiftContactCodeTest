@@ -129,6 +129,23 @@ extension UpdateContactViewController: UITableViewDataSource{
         }
     }
     
+    func configureCellKeyboard(cell: UpdateCellView, section: Int){
+        switch section {
+        case UpdateSectionType.Name.rawValue:
+            cell.textField.keyboardType = .namePhonePad
+            break
+        case UpdateSectionType.Email.rawValue:
+            cell.textField.keyboardType = .emailAddress
+            break
+        case UpdateSectionType.PhoneNum.rawValue:
+            cell.textField.keyboardType = .phonePad
+            break
+        default:
+            cell.textField.keyboardType = .default
+            break
+        }
+    }
+    
     func configureCell(cell: UpdateCellView, indexPath: IndexPath) {
         let placeHolderText: [String] = getPlaceHolders(section: indexPath.section)
         let cellText: [String] = getCellTextList(section: indexPath.section)
@@ -156,6 +173,7 @@ extension UpdateContactViewController: UITableViewDataSource{
         }
         listenToTextField(cell: cell, indexPath: indexPath)
         listenToDelete(cell: cell, indexPath: indexPath)
+        configureCellKeyboard(cell: cell, section: indexPath.section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
