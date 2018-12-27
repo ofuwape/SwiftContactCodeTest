@@ -24,7 +24,7 @@ class DetailContactViewController: UIViewController{
         configureDetailView()
     }
     
-     override func loadView() {
+    override func loadView() {
         self.detailContactView = DetailContactView.fromNib()
         self.view = self.detailContactView
     }
@@ -41,7 +41,10 @@ class DetailContactViewController: UIViewController{
     }
     
     @objc func editContact(){
-        // implement
+        let updateController: UpdateContactViewController = UpdateContactViewController()
+        updateController.contactVM = contactVM ?? ContactViewModel()
+        let navController = UINavigationController(rootViewController: updateController)
+        self.present(navController, animated: true, completion: nil)
     }
     
 }

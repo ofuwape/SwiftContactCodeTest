@@ -16,13 +16,13 @@ extension DetailContactViewController: UITableViewDataSource{
         
         switch section {
         case SectionType.PhoneNum.rawValue:
-            numRows = self.contactVM?.phoneNumbers?.count ?? 0
+            numRows = self.contactVM?.phoneNumbers.count ?? 0
             break
         case SectionType.Email.rawValue:
-            numRows = self.contactVM?.emails?.count ?? 0
+            numRows = self.contactVM?.emails.count ?? 0
             break
         case SectionType.Address.rawValue:
-            numRows = self.contactVM?.addresses?.count ?? 0
+            numRows = self.contactVM?.addresses.count ?? 0
             break
         case SectionType.DOB.rawValue:
             numRows = 1

@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
+class KeyboardListenerVC: UIViewController{
 //MARK: - Listen for Keyboard Changes
-extension ContactViewController {
     func setupViewResizerOnKeyboardShown() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShowForResizing),
@@ -47,4 +47,5 @@ extension ContactViewController {
             debugPrint("We're about to hide the keyboard and the keyboard size is nil. Now is the rapture.")
         }
     }
+
 }

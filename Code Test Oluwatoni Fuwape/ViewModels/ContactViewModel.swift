@@ -11,25 +11,25 @@ import RealmSwift
 
 struct ContactViewModel {
     
-    var firstname: String? = ""
-    var lastname: String? = ""
+    var firstname: String = ""
+    var lastname: String = ""
     var dOB: String = ""
     var fullName: String = ""
     
     var hasMatchedDetail: Bool = false
     var matchedDetail: NSMutableAttributedString = NSMutableAttributedString()
     
-    var addresses: [String]? = []
-    var phoneNumbers: [String]? = []
-    var emails: [String]? = []
+    var addresses: [String] = []
+    var phoneNumbers: [String] = []
+    var emails: [String] = []
     
 }
 
 extension ContactViewModel {
     
     init(contact :Contact) {
-        self.firstname = contact.firstname
-        self.lastname = contact.lastname
+        self.firstname = contact.firstname ?? ""
+        self.lastname = contact.lastname ?? ""
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, yyyy"
@@ -60,6 +60,19 @@ extension ContactViewModel {
         setUpMatchedDetail(query: query, foundAddress: foundAddress,foundPhoneNumber: foundPhoneNumber, foundEmail: foundEmail)
     }
     
+    func hasRequiredData()-> Bool{
+        return !trimText(text: firstname).isEmpty && trimText(text: lastname).isEmpty && !emails.isEmpty && !phoneNumbers.isEmpty
+    }
+    
+    func isSame(newContactVM: ContactViewModel)-> Bool{
+        return newContactVM.firstname == self.firstname && newContactVM.lastname == self.lastname && newContactVM.emails == self.emails && newContactVM.phoneNumbers == self.phoneNumbers && newContactVM.addresses == self.addresses;
+    }
+    
+    
+    func trimText(text: String) -> String{
+        return text.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
     fileprivate func getAttributedDetail(query: String, detailText: String) -> NSMutableAttributedString{
         let attrStr = NSMutableAttributedString(string: detailText)
         let inputLength = attrStr.string.count
@@ -79,7 +92,7 @@ extension ContactViewModel {
     
     fileprivate mutating func setUpMatchedDetail(query: String, foundAddress: Bool, foundPhoneNumber: Bool, foundEmail: Bool){
         
-        if foundEmail, let emails = self.emails {
+        if foundEmail {
             for email: String in emails{
                 if email.lowercased().range(of:query) != nil {
                     self.matchedDetail = getAttributedDetail(query: query, detailText: email.lowercased())
@@ -89,7 +102,7 @@ extension ContactViewModel {
             }
         }
         
-        if foundPhoneNumber, let phoneNumbers = self.phoneNumbers {
+        if foundPhoneNumber {
             for phoneNum: String in phoneNumbers{
                 if phoneNum.lowercased().range(of:query) != nil {
                     self.matchedDetail = getAttributedDetail(query: query, detailText: phoneNum.lowercased())
@@ -99,7 +112,7 @@ extension ContactViewModel {
             }
         }
         
-        if foundAddress, let addresses = self.addresses {
+        if foundAddress {
             for add: String in addresses{
                 if add.lowercased().range(of:query) != nil {
                     self.matchedDetail = getAttributedDetail(query: query, detailText: add.lowercased())

@@ -17,4 +17,20 @@ class Contact: Object{
     var phoneNumbers: List<PhoneNumberModel>? = List<PhoneNumberModel>()
     var emails: List<EmailModel>? = List<EmailModel>()
     
+    func fromContactViewModel(contactVM: ContactViewModel) -> Contact{
+        self.firstname = contactVM.firstname
+        self.lastname = contactVM.lastname
+        self.dateOfBirth = RealmUtils.stringToDate(dateText: contactVM.dOB)
+        self.emails?.append(objectsIn:  Array(contactVM.emails ).map { emailItem in
+            return EmailModel(emailText: emailItem)
+        })
+        self.phoneNumbers?.append(objectsIn:  Array(contactVM.phoneNumbers).map { phoneNumItem in
+            return PhoneNumberModel(phoneNumText: phoneNumItem)
+        })
+        self.addresses?.append(objectsIn:  Array(contactVM.addresses).map { addItem in
+            return AddressModel(addText: addItem)
+        })
+        return self
+    }
+    
 }

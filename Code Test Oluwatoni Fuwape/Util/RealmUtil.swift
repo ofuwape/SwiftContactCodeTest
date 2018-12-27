@@ -43,12 +43,7 @@ class RealmUtils{
                 // handle error
             }
         }
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
-        dateFormatter.dateFormat = "MMMM dd, yyyy"
-        dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone
-        
+
         resetDB()
         let realm = try! Realm()
         realm.beginWrite()
@@ -60,7 +55,7 @@ class RealmUtils{
                 let contact = Contact()
                 contact.firstname = contactDict["firstname"]
                 contact.lastname = contactDict["lastname"]
-                contact.dateOfBirth = dateFormatter.date(from: contactDict["dateOfBirth"] ?? "")
+                contact.dateOfBirth = RealmUtils.stringToDate(dateText: contactDict["dateOfBirth"] ?? "")
                 
                 if let addresses = contactDict["addresses"]{
                     for add in addresses.components(separatedBy: "|"){
@@ -90,6 +85,14 @@ class RealmUtils{
             }
         }
         try! realm.commitWrite()
+    }
+    
+    static func stringToDate(dateText: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone
+        return dateFormatter.date(from: dateText) ?? Date()
     }
     
     func fetchAll(realmDelegate: RealmUtilDelegate){

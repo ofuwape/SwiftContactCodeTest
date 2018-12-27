@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 
-class ContactViewController: UIViewController, RealmUtilDelegate {
+class ContactViewController: KeyboardListenerVC, RealmUtilDelegate {
     
     // MARK: - Properties
     fileprivate let reuseIdentifier = "ContactCell"
@@ -116,7 +116,7 @@ class ContactViewController: UIViewController, RealmUtilDelegate {
         results.append(contentsOf: mPhoneNumResults)
         results.append(contentsOf: mEmailResults)
         
-        results = results.sorted(by:{$0.firstname! < $1.firstname!})
+        results = results.sorted(by:{$0.firstname < $1.firstname})
         contactResults = results
         
         reloadPage()

@@ -25,8 +25,14 @@
 		F74B5AEB21D1470700F2ED53 /* DetailContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AEA21D1470700F2ED53 /* DetailContactView.swift */; };
 		F74B5AEF21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AEE21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift */; };
 		F74B5AF121D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AF021D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift */; };
+		F74B5AF321D1B05100F2ED53 /* UpdateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AF221D1B05100F2ED53 /* UpdateContactViewController.swift */; };
+		F74B5AF521D1B88F00F2ED53 /* UpdateContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74B5AF421D1B88F00F2ED53 /* UpdateContactView.xib */; };
+		F74B5AF721D1B8E200F2ED53 /* UpdateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AF621D1B8E200F2ED53 /* UpdateContactView.swift */; };
 		F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */; };
 		F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */; };
+		F77C76B121D3BB3600AA92C1 /* UpdateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B021D3BB3600AA92C1 /* UpdateCellView.swift */; };
+		F77C76B321D3BB5D00AA92C1 /* UpdateCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F77C76B221D3BB5D00AA92C1 /* UpdateCellView.xib */; };
+		F77C76B621D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
 		F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64A21C9B74500681E81 /* AppDelegate.swift */; };
 		F78AE65021C9B74500681E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE64E21C9B74500681E81 /* Main.storyboard */; };
@@ -85,8 +91,14 @@
 		F74B5AEA21D1470700F2ED53 /* DetailContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactView.swift; sourceTree = "<group>"; };
 		F74B5AEE21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailContactViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		F74B5AF021D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailContactViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		F74B5AF221D1B05100F2ED53 /* UpdateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContactViewController.swift; sourceTree = "<group>"; };
+		F74B5AF421D1B88F00F2ED53 /* UpdateContactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateContactView.xib; sourceTree = "<group>"; };
+		F74B5AF621D1B8E200F2ED53 /* UpdateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContactView.swift; sourceTree = "<group>"; };
 		F74DDA0A21CD7806002905A8 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCollectionCell.xib; sourceTree = "<group>"; };
+		F77C76B021D3BB3600AA92C1 /* UpdateCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCellView.swift; sourceTree = "<group>"; };
+		F77C76B221D3BB5D00AA92C1 /* UpdateCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCellView.xib; sourceTree = "<group>"; };
+		F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateContactViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Oluwatoni Fuwape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78AE64A21C9B74500681E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +179,7 @@
 		F74B5ACF21D111A300F2ED53 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F77C76B421D3C23300AA92C1 /* UpdateContactViewController */,
 				F74B5AED21D17C8E00F2ED53 /* DetailContactViewController */,
 				F74B5AEC21D17C7700F2ED53 /* ContactViewController */,
 			);
@@ -197,6 +210,7 @@
 			children = (
 				F74B5AC721D0028400F2ED53 /* ContactViewController.swift */,
 				F74B5AE621D145EF00F2ED53 /* DetailContactViewController.swift */,
+				F74B5AF221D1B05100F2ED53 /* UpdateContactViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,8 +222,20 @@
 				F74DDA0B21CD7806002905A8 /* ContactCollectionCell.xib */,
 				F74B5AE821D146E900F2ED53 /* DetailContactView.xib */,
 				F74B5AEA21D1470700F2ED53 /* DetailContactView.swift */,
+				F74B5AF421D1B88F00F2ED53 /* UpdateContactView.xib */,
+				F74B5AF621D1B8E200F2ED53 /* UpdateContactView.swift */,
+				F77C76B021D3BB3600AA92C1 /* UpdateCellView.swift */,
+				F77C76B221D3BB5D00AA92C1 /* UpdateCellView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F77C76B421D3C23300AA92C1 /* UpdateContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */,
+			);
+			path = UpdateContactViewController;
 			sourceTree = "<group>";
 		};
 		F782EDA821C9C22000799BD9 /* Models */ = {
@@ -418,11 +444,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F79F234721CDF8E200F296AA /* contacts.json in Resources */,
+				F77C76B321D3BB5D00AA92C1 /* UpdateCellView.xib in Resources */,
 				F78AE65521C9B74900681E81 /* LaunchScreen.storyboard in Resources */,
 				F74B5AE921D146E900F2ED53 /* DetailContactView.xib in Resources */,
 				F78AE65221C9B74900681E81 /* Assets.xcassets in Resources */,
 				F74DDA0D21CD7807002905A8 /* ContactCollectionCell.xib in Resources */,
 				F78AE65021C9B74500681E81 /* Main.storyboard in Resources */,
+				F74B5AF521D1B88F00F2ED53 /* UpdateContactView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,13 +636,17 @@
 				F79F234921CE037D00F296AA /* ContactViewModel.swift in Sources */,
 				F74B5AEB21D1470700F2ED53 /* DetailContactView.swift in Sources */,
 				F74B5AF121D183CE00F2ED53 /* DetailContactViewController+UITableViewDelegate.swift in Sources */,
+				F77C76B121D3BB3600AA92C1 /* UpdateCellView.swift in Sources */,
+				F74B5AF721D1B8E200F2ED53 /* UpdateContactView.swift in Sources */,
 				F74DDA0C21CD7807002905A8 /* ContactCollectionCell.swift in Sources */,
 				F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */,
 				F74B5ACE21D04A7200F2ED53 /* AddressModel.swift in Sources */,
+				F77C76B621D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift in Sources */,
 				F74B5AD521D113EA00F2ED53 /* ContactViewController+UICollectionViewDataSource.swift in Sources */,
 				F74B5AD121D111D100F2ED53 /* ContactViewController+Keyboard.swift in Sources */,
 				F74B5ACC21D04A6300F2ED53 /* PhoneNumberModel.swift in Sources */,
 				F79F234421CDD49000F296AA /* RealmUtil.swift in Sources */,
+				F74B5AF321D1B05100F2ED53 /* UpdateContactViewController.swift in Sources */,
 				F74B5AEF21D17CBB00F2ED53 /* DetailContactViewController+UITableViewDataSource.swift in Sources */,
 				F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */,
 				F74B5AE721D145EF00F2ED53 /* DetailContactViewController.swift in Sources */,
