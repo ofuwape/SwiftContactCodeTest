@@ -16,7 +16,7 @@ extension UpdateContactViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
+        datePicker.isHidden = true
         if (indexPath.section == UpdateSectionType.PhoneNum.rawValue && indexPath.row == contactVM.phoneNumbers.count) {
             contactVM.phoneNumbers.append("")
             addNewRow(nextIndex: contactVM.phoneNumbers.count-1, section: indexPath.section)
@@ -27,7 +27,8 @@ extension UpdateContactViewController: UITableViewDelegate{
             contactVM.addresses.append("")
             addNewRow(nextIndex: contactVM.addresses.count-1, section: indexPath.section)
         } else if (indexPath.section == UpdateSectionType.DOB.rawValue){
-            //start date picker
+            datePicker.isHidden = false
+            self.view.endEditing(true)
         }else if (indexPath.section == UpdateSectionType.DeleteContact.rawValue){
             confirmDeleteContact()
         }

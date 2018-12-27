@@ -36,11 +36,7 @@ extension ContactViewModel {
 
         self.primaryKey = contact.id
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd, yyyy"
-        if let date = contact.dateOfBirth{
-          self.dOB = dateFormatter.string(from: date)
-        }
+        self.dOB = ContactViewModel.dateToString(date: contact.dateOfBirth)
         
         let addressItems: [AddressModel] = Array(contact.addresses ?? List())
         self.addresses = addressItems.map { addressItem in
@@ -61,6 +57,13 @@ extension ContactViewModel {
     init(contact :Contact, query: String, foundAddress: Bool, foundPhoneNumber: Bool, foundEmail: Bool) {
         self.init(contact: contact)
         setUpMatchedDetail(query: query, foundAddress: foundAddress,foundPhoneNumber: foundPhoneNumber, foundEmail: foundEmail)
+    }
+    
+    static func dateToString(date: Date?) -> String{
+        let mDate: Date = date ?? Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        return dateFormatter.string(from: mDate)
     }
     
     func hasRequiredData()-> Bool{

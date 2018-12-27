@@ -164,12 +164,15 @@ class RealmUtils{
         }
     }
     
-    func saveItem(contactVM: ContactViewModel, delegate: RealmUtilSaveDeleteDelegate){
+    func saveItem(contactVM: ContactViewModel, delegate: RealmUtilSaveDeleteDelegate, isNew: Bool){
         DispatchQueue.global().async {
             autoreleasepool {
                 var contact: Contact = Contact()
                 contact = contact.fromContactViewModel(contactVM: contactVM)
                 let realm = try! Realm()
+                if !isNew, let contactFound = realm.object(ofType: Contact.self, forPrimaryKey: contactVM.primaryKey){
+                    contact.id = contactFound.id
+                }
                 realm.beginWrite()
                 realm.add(contact)
                 try! realm.commitWrite()

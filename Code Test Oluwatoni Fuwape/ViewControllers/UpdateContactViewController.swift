@@ -26,6 +26,7 @@ class UpdateContactViewController: KeyboardListenerVC{
     let deleteCellIdentifier = "DeleteCell"
     var isNewContact: Bool = false
     let realmUtil: RealmUtils = RealmUtils()
+    let datePicker: UIDatePicker = UIDatePicker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +57,27 @@ class UpdateContactViewController: KeyboardListenerVC{
         self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
+    func configureDatePicker(){
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        datePicker.addTarget(self, action: #selector(dateChanged), for: UIControl.Event.valueChanged)
+        
+        let screenBounds = UIScreen.main.bounds
+        let pickerHeight: CGFloat = 250.0
+        datePicker.frame = CGRect.init(x: screenBounds.minX, y: screenBounds.height-pickerHeight, width: screenBounds.width, height: pickerHeight)
+        
+        datePicker.isHidden = true
+        datePicker.backgroundColor = UIColor.gray
+        self.view.addSubview(datePicker)
+    }
+    
+    @objc func dateChanged(){
+        contactVM.dOB = ContactViewModel.dateToString(date: datePicker.date)
+        updateContactView?.updateContactTableView.reloadSections(IndexSet([UpdateSectionType.DOB.rawValue]), with: .automatic)
+        
+    }
+    
     @objc func saveContact(){
-        realmUtil.saveItem(contactVM: contactVM, delegate: self)
+        realmUtil.saveItem(contactVM: contactVM, delegate: self, isNew: isNewContact)
     }
     
     func confirmDeleteContact(){
@@ -87,17 +107,9 @@ class UpdateContactViewController: KeyboardListenerVC{
     }
     
     func configureDetailView(){
-        configureDoneButton()
+        configureDatePicker()
         updateContactView?.updateContactTableView.reloadData()
         updateContactView?.updateContactTableView.tableFooterView = UIView() // remove empty cells
-    }
-    
-    func configureDoneButton(){
-        self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveContactData)), animated: true)
-    }
-    
-    @objc func saveContactData(){
-        // implement
     }
     
     func addNewRow(nextIndex: Int, section: Int){
@@ -139,11 +151,23 @@ enum UpdateSectionType : Int {
 
 extension UpdateContactViewController: RealmUtilSaveDeleteDelegate{
     func deleteComplete() {
+        let parentController = self.parent?.presentingViewController as? UINavigationController
         self.dismiss(animated: true, completion: nil)
+        if let parent = parentController{
+            parent.popViewController(animated: true)
+        }
     }
     
     func saveComplete() {
         self.dismiss(animated: true, completion: nil)
+        let parentController = self.presentingViewController
+        if isNewContact{
+            let detailController: DetailContactViewController = DetailContactViewController()
+            detailController.contactVM = contactVM
+            if let parent = parentController as? UINavigationController{
+                parent.pushViewController(detailController, animated: true)
+            }
+        }
     }
     
 }
