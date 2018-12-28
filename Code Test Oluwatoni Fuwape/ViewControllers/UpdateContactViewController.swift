@@ -23,6 +23,7 @@ class UpdateContactViewController: KeyboardListenerVC{
     let numOfSections: Int = 6 // Name, PhoneNums, Emails, Address, Birthday
     let cellIdentifier = "UpdateCell"
     let deleteCellIdentifier = "DeleteCell"
+    static let tablelIdentifier = "UpdateTableId"
     var isNewContact: Bool = false
     let realmUtil: RealmUtils = RealmUtils()
     let datePicker: UIDatePicker = UIDatePicker()
@@ -35,6 +36,7 @@ class UpdateContactViewController: KeyboardListenerVC{
         setupViewResizerOnKeyboardShown()
         updateContactView?.updateContactTableView.delegate = self
         updateContactView?.updateContactTableView.dataSource = self
+        updateContactView?.updateContactTableView.accessibilityIdentifier = UpdateContactViewController.tablelIdentifier
         updateContactView?.updateContactTableView.register(UINib(nibName: "UpdateCellView", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         updateContactView?.updateContactTableView.register(UITableViewCell.self, forCellReuseIdentifier: deleteCellIdentifier)
         

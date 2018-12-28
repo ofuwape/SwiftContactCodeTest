@@ -167,6 +167,7 @@ extension UpdateContactViewController: UITableViewDataSource{
                 }
                 if indexPath.section != UpdateSectionType.DOB.rawValue {
                     cell.setRemoveImage()
+                    cell.buttonImageView.accessibilityIdentifier = "DeleteRowSection_"+String(indexPath.section)
                 }
                 cell.textField.isUserInteractionEnabled = !(indexPath.section == UpdateSectionType.DOB.rawValue)
             }

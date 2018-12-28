@@ -43,9 +43,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F78AE66521C9B74900681E81"
+               BlueprintIdentifier = "F77C76CE21D673BC00AA92C1"
                BuildableName = "Code Test Oluwatoni FuwapeUITests.xctest"
                BlueprintName = "Code Test Oluwatoni FuwapeUITests"
+               ReferencedContainer = "container:Code Test Oluwatoni Fuwape.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F77C76DC21D6746D00AA92C1"
+               BuildableName = "Code TestOluwatoni FuwapeUITests.xctest"
+               BlueprintName = "Code TestOluwatoni FuwapeUITests"
                ReferencedContainer = "container:Code Test Oluwatoni Fuwape.xcodeproj">
             </BuildableReference>
          </TestableReference>

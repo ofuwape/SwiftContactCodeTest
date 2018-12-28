@@ -15,12 +15,14 @@ class DetailContactViewController: UIViewController{
     var contactVM: ContactViewModel?
     let numOfSections: Int = 4 // PhoneNums, Emails, Address, Birthday
     let cellIdentifier = "DetailCell"
+    static let tablelIdentifier = "DetailTableId"
     let realmUtil = RealmUtils()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         detailContactView?.detailTableView.delegate = self
         detailContactView?.detailTableView.dataSource = self
+        detailContactView?.detailTableView.accessibilityIdentifier = DetailContactViewController.tablelIdentifier
         detailContactView?.detailTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         configureDetailView()
     }

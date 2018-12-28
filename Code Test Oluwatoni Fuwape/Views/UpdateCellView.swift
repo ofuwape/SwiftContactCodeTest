@@ -24,12 +24,14 @@ class UpdateCellView: UITableViewCell{
         super.prepareForReuse()
         disposeBag = DisposeBag() // because life cicle of every cell ends on prepare for reuse
         self.textField.keyboardType = .default
+        buttonImageView.accessibilityIdentifier = ""
     }
     
     func setAddImage() {
         buttonImageView.contentMode = UIView.ContentMode.scaleAspectFit
         buttonImageView.image = addImage
         buttonImageView.isUserInteractionEnabled = false
+        buttonImageView.accessibilityIdentifier = ""
     }
     
     func setRemoveImage() {
@@ -41,5 +43,6 @@ class UpdateCellView: UITableViewCell{
     func clearImage() {
         buttonImageView.image = nil
         buttonImageView.isUserInteractionEnabled = false
+        buttonImageView.accessibilityIdentifier = ""
     }
 }
