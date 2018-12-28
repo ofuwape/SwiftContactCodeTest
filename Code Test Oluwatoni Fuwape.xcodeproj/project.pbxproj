@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
-		6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */; };
-		BE1F1E14D03E729B5896E148 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
-		DF201AB0C500628DAF47E83F /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D4974743885259E49475D6 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
-		E6BD1BABC5AE4F3A242F820A /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12CDC3E1FEE07D8272A635 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */; };
+		2632B7014DA015B4D524FF92 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC829DB84C7BEF3D63F2CC17 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */; };
+		9D0EB7CD5F8FFF259E53935B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A529AE03C0796FB0F70BAD /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */; };
+		F459361F888A26694B10FB5C /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEC106C40B63B0183401B58 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
 		F74B5AC821D0028500F2ED53 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC721D0028400F2ED53 /* ContactViewController.swift */; };
 		F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */; };
 		F74B5ACC21D04A6300F2ED53 /* PhoneNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */; };
@@ -34,6 +32,8 @@
 		F77C76B321D3BB5D00AA92C1 /* UpdateCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F77C76B221D3BB5D00AA92C1 /* UpdateCellView.xib */; };
 		F77C76B621D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */; };
 		F77C76B821D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B721D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift */; };
+		F77C76BC21D5EF6100AA92C1 /* ContactViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76BB21D5EF6100AA92C1 /* ContactViewControllerTest.swift */; };
+		F77C76BE21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76BD21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
 		F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64A21C9B74500681E81 /* AppDelegate.swift */; };
 		F78AE65021C9B74500681E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE64E21C9B74500681E81 /* Main.storyboard */; };
@@ -64,21 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40D4974743885259E49475D6 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C12CDC3E1FEE07D8272A635 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53F30AD6570A0DEDD6EF90CE /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		57460431CA9D5780F4107512 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D4679EACEC99B2CEEC85FAA /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9367C97535333DEF2A9AFD87 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
-		AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B05488B1F9D8388F0595A57E /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; sourceTree = "<group>"; };
-		B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
-		DE7B8D30DDF28E9EA05DEDF0 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
-		F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AEC106C40B63B0183401B58 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF4F82AC8EC8483113A311B /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		286D8F302DF121525D53646D /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C138DEFB7A489EA4808F280 /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		60F1EC9A3D6B3F1617DDBE10 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; sourceTree = "<group>"; };
+		61A529AE03C0796FB0F70BAD /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD1F757B443EA5A371AF770 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
+		BC829DB84C7BEF3D63F2CC17 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_FuwapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7AA9B0189E7FED06BE378FF /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F74B5AC721D0028400F2ED53 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
 		F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberModel.swift; sourceTree = "<group>"; };
@@ -101,6 +95,8 @@
 		F77C76B221D3BB5D00AA92C1 /* UpdateCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCellView.xib; sourceTree = "<group>"; };
 		F77C76B521D3D27F00AA92C1 /* UpdateContactViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateContactViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		F77C76B721D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateContactViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		F77C76BB21D5EF6100AA92C1 /* ContactViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewControllerTest.swift; sourceTree = "<group>"; };
+		F77C76BD21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactViewControllerTest.swift; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Oluwatoni Fuwape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78AE64A21C9B74500681E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1F1E14D03E729B5896E148 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */,
+				F459361F888A26694B10FB5C /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C64576530134AFC53F0599B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
-				E6BD1BABC5AE4F3A242F820A /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
+				9D0EB7CD5F8FFF259E53935B /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,22 +136,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148EA86A78EF17784BDE16A5 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */,
-				DF201AB0C500628DAF47E83F /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */,
+				2632B7014DA015B4D524FF92 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5EE23A15967E3B76DF5312A5 /* Frameworks */ = {
+		8FD7D4A271F3F88EC96109B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				71C56C016EC17EC54AF14DD5 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */,
-				67FB629AFDE7238B56712D39 /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */,
-				AEBDA98DA38BC765353BBB62 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */,
-				4C12CDC3E1FEE07D8272A635 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */,
-				40D4974743885259E49475D6 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeUITests.framework */,
+				1AEC106C40B63B0183401B58 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */,
+				61A529AE03C0796FB0F70BAD /* Pods_Code_Test_Oluwatoni_FuwapeTests.framework */,
+				BC829DB84C7BEF3D63F2CC17 /* Pods_Code_Test_Oluwatoni_FuwapeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,16 +156,12 @@
 		E8964FB7F576F07FF9BFA586 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */,
-				B05488B1F9D8388F0595A57E /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */,
-				53F30AD6570A0DEDD6EF90CE /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */,
-				E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
-				F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */,
-				6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */,
-				57460431CA9D5780F4107512 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */,
-				9367C97535333DEF2A9AFD87 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
-				DE7B8D30DDF28E9EA05DEDF0 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */,
-				7D4679EACEC99B2CEEC85FAA /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeUITests.release.xcconfig */,
+				8AD1F757B443EA5A371AF770 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */,
+				60F1EC9A3D6B3F1617DDBE10 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */,
+				1DF4F82AC8EC8483113A311B /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */,
+				286D8F302DF121525D53646D /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
+				5C138DEFB7A489EA4808F280 /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */,
+				C7AA9B0189E7FED06BE378FF /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -241,6 +229,23 @@
 			path = UpdateContactViewController;
 			sourceTree = "<group>";
 		};
+		F77C76B921D5EE7200AA92C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F74B5AE421D11D7C00F2ED53 /* ContactViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F77C76BA21D5EE8700AA92C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F77C76BB21D5EF6100AA92C1 /* ContactViewControllerTest.swift */,
+				F77C76BD21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F782EDA821C9C22000799BD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +273,7 @@
 				F78AE66921C9B74900681E81 /* Code Test Oluwatoni FuwapeUITests */,
 				F78AE64821C9B74500681E81 /* Products */,
 				E8964FB7F576F07FF9BFA586 /* Pods */,
-				5EE23A15967E3B76DF5312A5 /* Frameworks */,
+				8FD7D4A271F3F88EC96109B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,7 +309,8 @@
 		F78AE65E21C9B74900681E81 /* Code Test Oluwatoni FuwapeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F74B5AE421D11D7C00F2ED53 /* ContactViewModelTest.swift */,
+				F77C76BA21D5EE8700AA92C1 /* ViewControllers */,
+				F77C76B921D5EE7200AA92C1 /* ViewModel */,
 				F78AE65F21C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift */,
 				F78AE66121C9B74900681E81 /* Info.plist */,
 			);
@@ -343,11 +349,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F78AE66F21C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni Fuwape" */;
 			buildPhases = (
-				CD2C6C38F67994B45D04463C /* [CP] Check Pods Manifest.lock */,
+				E533D08F1453135B721DCC64 /* [CP] Check Pods Manifest.lock */,
 				F78AE64321C9B74500681E81 /* Sources */,
 				F78AE64421C9B74500681E81 /* Frameworks */,
 				F78AE64521C9B74500681E81 /* Resources */,
-				EB4A806CAD63F9BCF6218F03 /* [CP] Embed Pods Frameworks */,
+				B751E9FDE7D2B8090E270E6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,11 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F78AE67221C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni FuwapeTests" */;
 			buildPhases = (
-				1EEBCC1CCD84B0915BF5C30D /* [CP] Check Pods Manifest.lock */,
+				E0901ABA5931025FECB47A0D /* [CP] Check Pods Manifest.lock */,
 				F78AE65721C9B74900681E81 /* Sources */,
 				F78AE65821C9B74900681E81 /* Frameworks */,
 				F78AE65921C9B74900681E81 /* Resources */,
-				19B2CBCEB3D2597DB1939158 /* [CP] Embed Pods Frameworks */,
+				035744039E1968A8AD75A672 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,11 +388,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F78AE67521C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni FuwapeUITests" */;
 			buildPhases = (
-				01D7305035F78580A430C057 /* [CP] Check Pods Manifest.lock */,
+				34B38604493AEE06A86D4059 /* [CP] Check Pods Manifest.lock */,
 				F78AE66221C9B74900681E81 /* Sources */,
 				F78AE66321C9B74900681E81 /* Frameworks */,
 				F78AE66421C9B74900681E81 /* Resources */,
-				705EBDF569713287845365AB /* [CP] Embed Pods Frameworks */,
+				5D0E17A34034F26119899CC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,29 +480,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01D7305035F78580A430C057 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni FuwapeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		19B2CBCEB3D2597DB1939158 /* [CP] Embed Pods Frameworks */ = {
+		035744039E1968A8AD75A672 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -524,7 +508,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni FuwapeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1EEBCC1CCD84B0915BF5C30D /* [CP] Check Pods Manifest.lock */ = {
+		34B38604493AEE06A86D4059 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -539,14 +523,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni FuwapeTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni FuwapeUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		705EBDF569713287845365AB /* [CP] Embed Pods Frameworks */ = {
+		5D0E17A34034F26119899CC1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -574,29 +558,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni FuwapeUITests/Pods-Code Test Oluwatoni FuwapeUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CD2C6C38F67994B45D04463C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni Fuwape-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB4A806CAD63F9BCF6218F03 /* [CP] Embed Pods Frameworks */ = {
+		B751E9FDE7D2B8090E270E6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -624,6 +586,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0901ABA5931025FECB47A0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni FuwapeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E533D08F1453135B721DCC64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Code Test Oluwatoni Fuwape-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -661,7 +667,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F77C76BC21D5EF6100AA92C1 /* ContactViewControllerTest.swift in Sources */,
 				F78AE66021C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift in Sources */,
+				F77C76BE21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift in Sources */,
 				F74B5AE521D11D7C00F2ED53 /* ContactViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,7 +835,7 @@
 		};
 		F78AE67021C9B74900681E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B847AAEAAE0773C7A3A64F35 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */;
+			baseConfigurationReference = 8AD1F757B443EA5A371AF770 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -847,7 +855,7 @@
 		};
 		F78AE67121C9B74900681E81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B05488B1F9D8388F0595A57E /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */;
+			baseConfigurationReference = 60F1EC9A3D6B3F1617DDBE10 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -867,7 +875,7 @@
 		};
 		F78AE67321C9B74900681E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53F30AD6570A0DEDD6EF90CE /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */;
+			baseConfigurationReference = 1DF4F82AC8EC8483113A311B /* Pods-Code Test Oluwatoni FuwapeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -889,7 +897,7 @@
 		};
 		F78AE67421C9B74900681E81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4FDCAAD86C8B7B30A8B1CE9 /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */;
+			baseConfigurationReference = 286D8F302DF121525D53646D /* Pods-Code Test Oluwatoni FuwapeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -911,7 +919,7 @@
 		};
 		F78AE67621C9B74900681E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4E63E772F9985FC65894A9F /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */;
+			baseConfigurationReference = 5C138DEFB7A489EA4808F280 /* Pods-Code Test Oluwatoni FuwapeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -932,7 +940,7 @@
 		};
 		F78AE67721C9B74900681E81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A86BA36C789583B46607512 /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */;
+			baseConfigurationReference = C7AA9B0189E7FED06BE378FF /* Pods-Code Test Oluwatoni FuwapeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

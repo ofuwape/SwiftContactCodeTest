@@ -13,7 +13,7 @@
         <!--Contact View Controller-->
         <scene sceneID="uzi-4h-Xe4">
             <objects>
-                <viewController id="aVe-m7-2Aj" customClass="ContactViewController" customModule="Code_Test_Oluwatoni_Fuwape" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aVe-m7-2Aj" customClass="ContactViewController" customModule="Code_Test_Oluwatoni_Fuwape" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sz6-za-OFX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

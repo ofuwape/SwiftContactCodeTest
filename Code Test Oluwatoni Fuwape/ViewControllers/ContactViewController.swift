@@ -93,7 +93,7 @@ class ContactViewController: KeyboardListenerVC, RealmUtilDelegate {
     }
     
     // MARK: - RealmUtilDelegate
-    func foundResults(searchResults: Results<Contact>) {
+    func foundResults(searchResults: [Contact]) {
         let contactItems: [Contact] = Array(searchResults)
         contactResults = contactItems.map { contactItem in
             return ContactViewModel(contact :contactItem)
@@ -101,7 +101,7 @@ class ContactViewController: KeyboardListenerVC, RealmUtilDelegate {
         reloadPage()
     }
     
-    func foundResults(query: String, nameResults: Results<Contact>, addressResults: Results<Contact>, phoneNumResults: Results<Contact>, emailResults: Results<Contact>){
+    func foundResults(query: String, nameResults: [Contact], addressResults: [Contact], phoneNumResults: [Contact], emailResults: [Contact]){
        
         let nameItems: [Contact] = Array(nameResults)
         var results: [ContactViewModel] = nameItems.map { nameItem in

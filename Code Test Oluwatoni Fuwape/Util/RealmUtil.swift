@@ -98,7 +98,7 @@ class RealmUtils{
         DispatchQueue.global().async {
             autoreleasepool {
                 let realm = try! Realm()
-                realmDelegate.foundResults(searchResults: realm.objects(Contact.self).sorted(byKeyPath: "firstname", ascending: true))
+                realmDelegate.foundResults(searchResults: Array(realm.objects(Contact.self).sorted(byKeyPath: "firstname", ascending: true)))
             }
         }
     }
@@ -128,7 +128,7 @@ class RealmUtils{
                 let phoneNumResults = self.getResultsForQuery(realm: realm, queryPredicate: phoneNumQuery)
                 
                 
-                realmDelegate.foundResults(query: mQuery, nameResults: nameResults, addressResults: addResults, phoneNumResults: phoneNumResults, emailResults: emailResults)
+                realmDelegate.foundResults(query: mQuery, nameResults: Array(nameResults), addressResults: Array(addResults), phoneNumResults: Array(phoneNumResults), emailResults: Array(emailResults))
             }
         }
     }
@@ -203,8 +203,8 @@ class RealmUtils{
 }
 
 protocol RealmUtilDelegate: class {
-    func foundResults(searchResults: Results<Contact>)
-    func foundResults(query: String, nameResults: Results<Contact>, addressResults: Results<Contact>, phoneNumResults: Results<Contact>, emailResults: Results<Contact>)
+    func foundResults(searchResults: [Contact])
+    func foundResults(query: String, nameResults: [Contact], addressResults: [Contact], phoneNumResults: [Contact], emailResults: [Contact])
 }
 
 protocol RealmUtilSaveDeleteDelegate: class {
