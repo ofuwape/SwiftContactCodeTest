@@ -15,6 +15,8 @@ class Code_TestOluwatoni_FuwapeUITests: XCTestCase {
     
     override func setUp() {
         continueAfterFailure = false
+        app.launchArguments.append("UITest")
+        app.launchEnvironment["UITest"]="UITest"
         app.launch()
     }
     

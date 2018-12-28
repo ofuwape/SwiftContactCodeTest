@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        RealmUtils().seedDB()
+        if  ProcessInfo.processInfo.arguments.contains("UITest") || ProcessInfo.processInfo.environment.keys.contains("UITest") {
+            RealmUtils().seedDB()
+        }
         return true
     }
 
