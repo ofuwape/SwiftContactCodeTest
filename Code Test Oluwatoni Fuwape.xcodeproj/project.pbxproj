@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C2016BED3580208B85AB6CB /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD1A53FA49516E2E13CD292 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
-		F364F71F945B685855396F5B /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE89944EC48F02A43E90C87 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */; };
+		0B85FC71748747B737F044AE /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB580042658FADF24D8E17 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */; };
+		9E6F3EFDC49FD63F2655FF54 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBAFB6F04AA276BE8423237 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */; };
 		F74B5AC821D0028500F2ED53 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC721D0028400F2ED53 /* ContactViewController.swift */; };
 		F74B5ACA21D04A4D00F2ED53 /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */; };
 		F74B5ACC21D04A6300F2ED53 /* PhoneNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */; };
@@ -64,12 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1986EC399085D4A8A9972234 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; sourceTree = "<group>"; };
-		2AE89944EC48F02A43E90C87 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		445F33983504ED8ED201F98A /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4DD1A53FA49516E2E13CD292 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A94CF9E3C2E95EAF6423D1E3 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
-		AA0B3190EB68D053F1F7B2B2 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
+		157D0F0F4091B41589410967 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig"; sourceTree = "<group>"; };
+		1BDEE624DB86779F5C8E2C31 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CF3711F2B0E461F1BC89337 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.release.xcconfig"; sourceTree = "<group>"; };
+		5BBAFB6F04AA276BE8423237 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA524392EC2BE51639AAD6B /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; path = "Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape.debug.xcconfig"; sourceTree = "<group>"; };
+		9EAB580042658FADF24D8E17 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74B5AC721D0028400F2ED53 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		F74B5AC921D04A4D00F2ED53 /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
 		F74B5ACB21D04A6300F2ED53 /* PhoneNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberModel.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2016BED3580208B85AB6CB /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */,
+				9E6F3EFDC49FD63F2655FF54 /* Pods_Code_Test_Oluwatoni_Fuwape.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F364F71F945B685855396F5B /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
+				0B85FC71748747B737F044AE /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,10 +146,10 @@
 		E8964FB7F576F07FF9BFA586 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A94CF9E3C2E95EAF6423D1E3 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */,
-				1986EC399085D4A8A9972234 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */,
-				445F33983504ED8ED201F98A /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */,
-				AA0B3190EB68D053F1F7B2B2 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
+				8BA524392EC2BE51639AAD6B /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */,
+				3CF3711F2B0E461F1BC89337 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */,
+				1BDEE624DB86779F5C8E2C31 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */,
+				157D0F0F4091B41589410967 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -337,8 +337,8 @@
 				F77C76C121D66A2400AA92C1 /* Realm.framework */,
 				F77C76C321D66A2400AA92C1 /* RealmSwift.framework */,
 				F77C76C521D66A2400AA92C1 /* RxAtomic.framework */,
-				4DD1A53FA49516E2E13CD292 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */,
-				2AE89944EC48F02A43E90C87 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */,
+				5BBAFB6F04AA276BE8423237 /* Pods_Code_Test_Oluwatoni_Fuwape.framework */,
+				9EAB580042658FADF24D8E17 /* Pods_Code_Test_Oluwatoni_Fuwape_Code_Test_Oluwatoni_FuwapeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -368,11 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F78AE66F21C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni Fuwape" */;
 			buildPhases = (
-				79E9225D11716A169A68DB46 /* [CP] Check Pods Manifest.lock */,
+				1DAF89F499C1D5913AC48208 /* [CP] Check Pods Manifest.lock */,
 				F78AE64321C9B74500681E81 /* Sources */,
 				F78AE64421C9B74500681E81 /* Frameworks */,
 				F78AE64521C9B74500681E81 /* Resources */,
-				4E0DBCAEAF3C5E93E48E2276 /* [CP] Embed Pods Frameworks */,
+				793FC17BDBCA8D2D563C4C9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,11 +387,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F78AE67221C9B74900681E81 /* Build configuration list for PBXNativeTarget "Code Test Oluwatoni FuwapeTests" */;
 			buildPhases = (
-				6CF21FE0584D7A66D31C1353 /* [CP] Check Pods Manifest.lock */,
+				0BDA1B8E45A3762373B2C13D /* [CP] Check Pods Manifest.lock */,
 				F78AE65721C9B74900681E81 /* Sources */,
 				F78AE65821C9B74900681E81 /* Frameworks */,
 				F78AE65921C9B74900681E81 /* Resources */,
-				715A737DA37C415340BFBC5D /* [CP] Embed Pods Frameworks */,
+				C87889C52FE112F4E7E1BCA2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -479,37 +479,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E0DBCAEAF3C5E93E48E2276 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CF21FE0584D7A66D31C1353 /* [CP] Check Pods Manifest.lock */ = {
+		0BDA1B8E45A3762373B2C13D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -531,41 +501,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		715A737DA37C415340BFBC5D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		79E9225D11716A169A68DB46 /* [CP] Check Pods Manifest.lock */ = {
+		1DAF89F499C1D5913AC48208 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -585,6 +521,74 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		793FC17BDBCA8D2D563C4C9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS/RevealServer.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape/Pods-Code Test Oluwatoni Fuwape-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C87889C52FE112F4E7E1BCA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS/RevealServer.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests/Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -829,11 +833,12 @@
 		};
 		F78AE67021C9B74900681E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A94CF9E3C2E95EAF6423D1E3 /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */;
+			baseConfigurationReference = 8BA524392EC2BE51639AAD6B /* Pods-Code Test Oluwatoni Fuwape.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56PZRC5XTJ;
 				INFOPLIST_FILE = "Code Test Oluwatoni Fuwape/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -849,11 +854,12 @@
 		};
 		F78AE67121C9B74900681E81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1986EC399085D4A8A9972234 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */;
+			baseConfigurationReference = 3CF3711F2B0E461F1BC89337 /* Pods-Code Test Oluwatoni Fuwape.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56PZRC5XTJ;
 				INFOPLIST_FILE = "Code Test Oluwatoni Fuwape/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -869,7 +875,7 @@
 		};
 		F78AE67321C9B74900681E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 445F33983504ED8ED201F98A /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */;
+			baseConfigurationReference = 1BDEE624DB86779F5C8E2C31 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -891,7 +897,7 @@
 		};
 		F78AE67421C9B74900681E81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA0B3190EB68D053F1F7B2B2 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */;
+			baseConfigurationReference = 157D0F0F4091B41589410967 /* Pods-Code Test Oluwatoni Fuwape-Code Test Oluwatoni FuwapeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

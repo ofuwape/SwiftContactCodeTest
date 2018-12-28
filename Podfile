@@ -17,18 +17,12 @@ end
 target 'Code Test Oluwatoni Fuwape' do
   use_frameworks!
   podsForRuntime
+  pod 'Reveal-SDK', '~> 13', configuration:'Debug'
 
   target 'Code Test Oluwatoni FuwapeTests' do
     use_frameworks!
     podsForRuntime
     podsForTesting
   end
-
-#  target 'Code Test Oluwatoni FuwapeUITests' do
-#    use_frameworks!
-#    podsForRuntime
-#    podsForTesting
-#    inherit! :search_paths
-#  end
 
 end

@@ -27,11 +27,10 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iw2-cz-cSX" secondAttribute="bottom" id="Los-gI-NDR"/>
                 <constraint firstItem="iw2-cz-cSX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TqV-h2-Odi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iw2-cz-cSX" secondAttribute="trailing" constant="16" id="sCV-OI-KXI"/>
-                <constraint firstItem="iw2-cz-cSX" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="uPL-WL-SsZ"/>
-                <constraint firstItem="iw2-cz-cSX" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="xt4-Lv-A1W"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="tableViewBottomConstraint" destination="Los-gI-NDR" id="bTS-S5-Q7s"/>
                 <outlet property="updateContactTableView" destination="iw2-cz-cSX" id="vhl-Ll-6AB"/>
             </connections>
             <point key="canvasLocation" x="53.600000000000001" y="84.107946026986511"/>

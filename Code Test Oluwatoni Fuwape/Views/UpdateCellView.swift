@@ -16,6 +16,7 @@ class UpdateCellView: UITableViewCell{
     @IBOutlet var textField: UITextField!
     @IBOutlet var buttonImageView: UIImageView!
     
+    
     let addImage: UIImage? = UIImage(named: "Add")
     let removeImage: UIImage? = UIImage(named: "Remove")
     private(set) var disposeBag = DisposeBag()

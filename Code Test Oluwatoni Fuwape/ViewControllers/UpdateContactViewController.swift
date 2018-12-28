@@ -74,6 +74,16 @@ class UpdateContactViewController: KeyboardListenerVC{
         self.view.addSubview(datePicker)
     }
     
+    
+    func toggleDatePicker(show: Bool){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.updateContactView?.tableViewBottomConstraint.constant = show ? 250.0 : 0.0
+            self.datePicker.isHidden = !show
+            self.updateContactView?.layoutIfNeeded()
+            self.view.layoutIfNeeded()
+        })
+    }
+    
     @objc func dateChanged(){
         contactVM.dOB = ContactViewModel.dateToString(date: datePicker.date)
         updateContactView?.updateContactTableView.reloadSections(IndexSet([UpdateSectionType.DOB.rawValue]), with: .automatic)

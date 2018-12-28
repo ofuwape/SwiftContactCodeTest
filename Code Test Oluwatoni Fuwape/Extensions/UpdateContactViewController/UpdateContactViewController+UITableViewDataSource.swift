@@ -88,7 +88,13 @@ extension UpdateContactViewController: UITableViewDataSource{
             .debounce(0.5, scheduler: MainScheduler.instance)
             .subscribe({ _ in
                 self.updateContactField(text: cell.textField.text ?? "",indexPath: indexPath)
-                self.datePicker.isHidden = true
+            })
+            .disposed(by: cell.disposeBag)
+        
+        cell.textField.rx.controlEvent([.editingDidBegin])
+            .asObservable()
+            .subscribe({ _ in
+                self.toggleDatePicker(show: false)
             })
             .disposed(by: cell.disposeBag)
     }
@@ -101,7 +107,7 @@ extension UpdateContactViewController: UITableViewDataSource{
             .debounce(0.5, scheduler: MainScheduler.instance)
             .subscribe({_ in
                 self.removeRow(currentIndex: indexPath.row, section: indexPath.section)
-                self.datePicker.isHidden = true
+                self.toggleDatePicker(show: false)
             })
             .disposed(by: cell.disposeBag)
     }

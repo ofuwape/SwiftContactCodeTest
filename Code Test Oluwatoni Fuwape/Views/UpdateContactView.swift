@@ -12,6 +12,8 @@ import UIKit
 class UpdateContactView: UIView {
     
     @IBOutlet var updateContactTableView: UITableView!
+    @IBOutlet var tableViewBottomConstraint: NSLayoutConstraint!
+
 }
 
 extension UpdateContactView {
