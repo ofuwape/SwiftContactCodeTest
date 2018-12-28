@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import RxSwift
 
-
 class UpdateContactViewController: KeyboardListenerVC{
     
     var updateContactView: UpdateContactView?

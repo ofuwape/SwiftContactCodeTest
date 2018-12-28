@@ -34,6 +34,7 @@
 		F77C76B821D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76B721D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift */; };
 		F77C76BC21D5EF6100AA92C1 /* ContactViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76BB21D5EF6100AA92C1 /* ContactViewControllerTest.swift */; };
 		F77C76BE21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76BD21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift */; };
+		F77C76C021D60BED00AA92C1 /* UpdateContactViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77C76BF21D60BED00AA92C1 /* UpdateContactViewControllertest.swift */; };
 		F782EDAB21C9C29300799BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782EDAA21C9C29300799BD9 /* Contact.swift */; };
 		F78AE64B21C9B74500681E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AE64A21C9B74500681E81 /* AppDelegate.swift */; };
 		F78AE65021C9B74500681E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78AE64E21C9B74500681E81 /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		F77C76B721D5432B00AA92C1 /* UpdateContactViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateContactViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		F77C76BB21D5EF6100AA92C1 /* ContactViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewControllerTest.swift; sourceTree = "<group>"; };
 		F77C76BD21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactViewControllerTest.swift; sourceTree = "<group>"; };
+		F77C76BF21D60BED00AA92C1 /* UpdateContactViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContactViewControllertest.swift; sourceTree = "<group>"; };
 		F782EDAA21C9C29300799BD9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F78AE64721C9B74500681E81 /* Code Test Oluwatoni Fuwape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Oluwatoni Fuwape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78AE64A21C9B74500681E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				F77C76BB21D5EF6100AA92C1 /* ContactViewControllerTest.swift */,
 				F77C76BD21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift */,
+				F77C76BF21D60BED00AA92C1 /* UpdateContactViewControllertest.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				F77C76BC21D5EF6100AA92C1 /* ContactViewControllerTest.swift in Sources */,
 				F78AE66021C9B74900681E81 /* Code_Test_Oluwatoni_FuwapeTests.swift in Sources */,
 				F77C76BE21D5FE7300AA92C1 /* DetailContactViewControllerTest.swift in Sources */,
+				F77C76C021D60BED00AA92C1 /* UpdateContactViewControllertest.swift in Sources */,
 				F74B5AE521D11D7C00F2ED53 /* ContactViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
