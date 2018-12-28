@@ -95,6 +95,7 @@ class UpdateContactViewController: KeyboardListenerVC{
     }
     
     func confirmDeleteContact(){
+        
         let deleteAlert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         
         deleteAlert.addAction(UIAlertAction(title: "Delete Contact", style: .destructive, handler: { (action: UIAlertAction!) in
@@ -103,8 +104,15 @@ class UpdateContactViewController: KeyboardListenerVC{
         
         deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
         }))
+        if let mainView = self.updateContactView{
+            let popPresenter = deleteAlert.popoverPresentationController
+            popPresenter?.sourceView = mainView
+            popPresenter?.sourceRect = CGRect(x: mainView.bounds.midX, y: mainView.bounds.midY, width: 0, height: 0)
+            popPresenter?.permittedArrowDirections = []
+            present(deleteAlert, animated: true, completion: nil)
+        }
+    
         
-        present(deleteAlert, animated: true, completion: nil)
     }
     
     func deleteContact(){
