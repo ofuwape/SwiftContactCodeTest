@@ -24,16 +24,17 @@ class Contact: Object{
     }
     
     func fromContactViewModel(contactVM: ContactViewModel) -> Contact{
-        self.firstname = contactVM.firstname
-        self.lastname = contactVM.lastname
+        self.firstname = ContactViewModel.trimText(text: contactVM.firstname)
+        self.lastname = ContactViewModel.trimText(text: contactVM.lastname)
         self.dateOfBirth = RealmUtils.stringToDate(dateText: contactVM.dOB)
-        self.emails?.append(objectsIn:  Array(contactVM.emails ).map { emailItem in
+        
+        self.emails?.append(objectsIn:  Array(ContactViewModel.cleanList(items:  contactVM.emails)).map { emailItem in
             return EmailModel(emailText: emailItem)
         })
-        self.phoneNumbers?.append(objectsIn:  Array(contactVM.phoneNumbers).map { phoneNumItem in
+        self.phoneNumbers?.append(objectsIn:  Array(ContactViewModel.cleanList(items: contactVM.phoneNumbers)).map { phoneNumItem in
             return PhoneNumberModel(phoneNumText: phoneNumItem)
         })
-        self.addresses?.append(objectsIn:  Array(contactVM.addresses).map { addItem in
+        self.addresses?.append(objectsIn:  Array(ContactViewModel.cleanList(items: contactVM.addresses)).map { addItem in
             return AddressModel(addText: addItem)
         })
         self.id = contactVM.primaryKey

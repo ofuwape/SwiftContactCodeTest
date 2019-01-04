@@ -155,29 +155,30 @@ extension UpdateContactViewController: UITableViewDataSource{
     func configureCell(cell: UpdateCellView, indexPath: IndexPath) {
         let placeHolderText: [String] = getPlaceHolders(section: indexPath.section)
         let cellText: [String] = getCellTextList(section: indexPath.section)
-        if indexPath.section == UpdateSectionType.Name.rawValue {
-            cell.textField.placeholder = placeHolderText[indexPath.row]
-            if !cellText.isEmpty{
-                cell.textField?.text = cellText[indexPath.row]
-            }
+       
+        
+        cell.textField.placeholder = placeHolderText[0]
+        if indexPath.row >= cellText.count{
+            cell.textField.isUserInteractionEnabled = false
+            cell.textField.placeholder = "Add "+placeHolderText[0]
+            cell.setAddImage()
         }else{
-            cell.textField.placeholder = placeHolderText[0]
-            if indexPath.row >= cellText.count{
-                cell.textField.isUserInteractionEnabled = false
-                cell.textField.placeholder = "Add "+placeHolderText[0]
-                cell.setAddImage()
-            }else{
-                let currentCellText: String = cellText[indexPath.row]
-                if !currentCellText.isEmpty{
-                    cell.textField.text = currentCellText
-                }
-                if indexPath.section != UpdateSectionType.DOB.rawValue {
-                    cell.setRemoveImage()
-                    cell.buttonImageView.accessibilityIdentifier = "DeleteRowSection_"+String(indexPath.section)
-                }
-                cell.textField.isUserInteractionEnabled = !(indexPath.section == UpdateSectionType.DOB.rawValue)
+            let currentCellText: String = cellText[indexPath.row]
+            if !currentCellText.isEmpty{
+                cell.textField.text = currentCellText
             }
+            if indexPath.section != UpdateSectionType.DOB.rawValue {
+                cell.setRemoveImage()
+                cell.buttonImageView.accessibilityIdentifier = "DeleteRowSection_"+String(indexPath.section)
+            }
+            if indexPath.section == UpdateSectionType.Name.rawValue {
+                cell.textField.placeholder = placeHolderText[indexPath.row]
+                cell.clearImage()
+            }
+            cell.textField.isUserInteractionEnabled = !(indexPath.section == UpdateSectionType.DOB.rawValue)
         }
+        
+        
         listenToTextField(cell: cell, indexPath: indexPath)
         listenToDelete(cell: cell, indexPath: indexPath)
         configureCellKeyboard(cell: cell, section: indexPath.section)

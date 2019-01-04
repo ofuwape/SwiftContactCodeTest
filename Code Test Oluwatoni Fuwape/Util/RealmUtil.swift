@@ -21,70 +21,78 @@ class RealmUtils{
     
     //  Write to Realm
     func saveContact(mContact: Contact) {
-        let realm = try! Realm()
-        // Save your object
-        realm.beginWrite()
-        realm.add(mContact)
-        try! realm.commitWrite()
+        do{
+            let realm = try Realm()
+            // Save your object
+            realm.beginWrite()
+            realm.add(mContact)
+        try realm.commitWrite()
+        }catch{
+            print("saveContact error")
+        }
     }
     
     // Import Data
     func seedDB(){
-        // Import JSON
-        var contactDicts: [Any]?
-        if let path = Bundle.main.path(forResource: "contacts", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let mContactDicts = jsonResult as? [Any] {
-                    contactDicts = mContactDicts
+        do{
+            // Import JSON
+            var contactDicts: [Any]?
+            if let path = Bundle.main.path(forResource: "contacts", ofType: "json") {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                    let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                    if let mContactDicts = jsonResult as? [Any] {
+                        contactDicts = mContactDicts
+                    }
+                } catch {
+                    // handle error
                 }
-            } catch {
-                // handle error
             }
-        }
 
-        resetDB()
-        let realm = try! Realm()
-        realm.beginWrite()
-        
-        // Add Contact objects in realm for every contacts dictionary in JSON array
-        for mContactDict: Any in contactDicts! {
-            if let contactDict = mContactDict as? Dictionary<String, String>{
-                
-                let contact = Contact()
-                contact.firstname = contactDict["firstname"]
-                contact.lastname = contactDict["lastname"]
-                contact.dateOfBirth = RealmUtils.stringToDate(dateText: contactDict["dateOfBirth"] ?? "")
-                
-                if let addresses = contactDict["addresses"]{
-                    for add in addresses.components(separatedBy: "|"){
-                        let addModel: AddressModel  = AddressModel()
-                        addModel.text = add
-                      contact.addresses?.append(addModel)
+            resetDB()
+            let realm = try Realm()
+            realm.beginWrite()
+            
+            // Add Contact objects in realm for every contacts dictionary in JSON array
+            for mContactDict: Any in contactDicts! {
+                if let contactDict = mContactDict as? Dictionary<String, String>{
+                    
+                    let contact = Contact()
+                    contact.firstname = contactDict["firstname"]
+                    contact.lastname = contactDict["lastname"]
+                    contact.dateOfBirth = RealmUtils.stringToDate(dateText: contactDict["dateOfBirth"] ?? "")
+                    
+                    if let addresses = contactDict["addresses"]{
+                        for add in addresses.components(separatedBy: "|"){
+                            let addModel: AddressModel  = AddressModel()
+                            addModel.text = add
+                          contact.addresses?.append(addModel)
+                        }
                     }
-                }
-                
-                if let phoneNumbers = contactDict["phoneNumbers"]{
-                    for phoneNum in phoneNumbers.components(separatedBy: "|"){
-                        let phoneNumModel: PhoneNumberModel  = PhoneNumberModel()
-                        phoneNumModel.text = phoneNum
-                        contact.phoneNumbers?.append(phoneNumModel)
+                    
+                    if let phoneNumbers = contactDict["phoneNumbers"]{
+                        for phoneNum in phoneNumbers.components(separatedBy: "|"){
+                            let phoneNumModel: PhoneNumberModel  = PhoneNumberModel()
+                            phoneNumModel.text = phoneNum
+                            contact.phoneNumbers?.append(phoneNumModel)
+                        }
                     }
-                }
-                if let emails = contactDict["emails"]{
-                    for email in emails.components(separatedBy: "|"){
-                        let emailModel: EmailModel  = EmailModel()
-                        emailModel.text = email
-                        contact.emails?.append(emailModel)
+                    if let emails = contactDict["emails"]{
+                        for email in emails.components(separatedBy: "|"){
+                            let emailModel: EmailModel  = EmailModel()
+                            emailModel.text = email
+                            contact.emails?.append(emailModel)
+                        }
                     }
+                    
+                    realm.add(contact)
+                    
                 }
-                
-                realm.add(contact)
-                
             }
+            try realm.commitWrite()
+        }catch{
+            print("seedDB contact")
         }
-        try! realm.commitWrite()
     }
     
     static func stringToDate(dateText: String) -> Date {
@@ -97,8 +105,12 @@ class RealmUtils{
         // Multi-threading
         DispatchQueue.global().async {
             autoreleasepool {
-                let realm = try! Realm()
-                realmDelegate.foundResults(searchResults: Array(realm.objects(Contact.self).sorted(byKeyPath: "firstname", ascending: true)))
+                do{
+                    let realm = try Realm()
+                    realmDelegate.foundResults(searchResults: Array(realm.objects(Contact.self).sorted(byKeyPath: "firstname", ascending: true)))
+                }catch{
+                    print("fetchAll error")
+                }
             }
         }
     }
@@ -113,22 +125,27 @@ class RealmUtils{
         let mQuery: String = formatQuery(query: query)
         DispatchQueue.global().async {
             autoreleasepool {
-                let realm = try! Realm()
                 
-                let nameQuery: String = String(format: "firstname contains[cd] '%@' OR lastname contains[cd] '%@'", mQuery,mQuery)
-                let nameResults = self.getResultsForQuery(realm: realm, queryPredicate: nameQuery)
-               
-                let emailQuery: String = String(format: "any emails.text contains[cd] '%@'", mQuery)
-                let emailResults = self.getResultsForQuery(realm: realm, queryPredicate: emailQuery)
-                
-                let addQuery: String = String(format: "any addresses.text contains[cd] '%@'", mQuery)
-                let addResults = self.getResultsForQuery(realm: realm, queryPredicate: addQuery)
-                
-                let phoneNumQuery: String = String(format: "any phoneNumbers.text contains[cd] '%@'", mQuery)
-                let phoneNumResults = self.getResultsForQuery(realm: realm, queryPredicate: phoneNumQuery)
-                
-                
-                realmDelegate.foundResults(query: mQuery, nameResults: Array(nameResults), addressResults: Array(addResults), phoneNumResults: Array(phoneNumResults), emailResults: Array(emailResults))
+                do{
+                    let realm = try Realm()
+                    
+                    let nameQuery: String = String(format: "firstname contains[cd] '%@' OR lastname contains[cd] '%@'", mQuery,mQuery)
+                    let nameResults = self.getResultsForQuery(realm: realm, queryPredicate: nameQuery)
+                   
+                    let emailQuery: String = String(format: "any emails.text contains[cd] '%@'", mQuery)
+                    let emailResults = self.getResultsForQuery(realm: realm, queryPredicate: emailQuery)
+                    
+                    let addQuery: String = String(format: "any addresses.text contains[cd] '%@'", mQuery)
+                    let addResults = self.getResultsForQuery(realm: realm, queryPredicate: addQuery)
+                    
+                    let phoneNumQuery: String = String(format: "any phoneNumbers.text contains[cd] '%@'", mQuery)
+                    let phoneNumResults = self.getResultsForQuery(realm: realm, queryPredicate: phoneNumQuery)
+                    
+                    
+                    realmDelegate.foundResults(query: mQuery, nameResults: Array(nameResults), addressResults: Array(addResults), phoneNumResults: Array(phoneNumResults), emailResults: Array(emailResults))
+                }catch{
+                    print("fetchByQuery error")
+                }
             }
         }
     }
@@ -141,9 +158,13 @@ class RealmUtils{
     func fechItem(id: String, delegate: RealmUtilSingleFetchDelegate){
         DispatchQueue.global().async {
             autoreleasepool {
-                let realm = try! Realm()
-                let contact = realm.object(ofType: Contact.self, forPrimaryKey: id)
-                delegate.foundItem(contact: contact)
+                do{
+                    let realm = try Realm()
+                    let contact = realm.object(ofType: Contact.self, forPrimaryKey: id)
+                    delegate.foundItem(contact: contact)
+                }catch{
+                    print("fechItem error")
+                }
             }
         }
     }
@@ -151,12 +172,16 @@ class RealmUtils{
     func deleteItem(id: String, delegate: RealmUtilSaveDeleteDelegate){
         DispatchQueue.global().async {
             autoreleasepool {
-                let realm = try! Realm()
-                if let contact = realm.object(ofType: Contact.self, forPrimaryKey: id){
-                    realm.beginWrite()
-                    realm.delete(contact)
-                    try! realm.commitWrite()
-                    delegate.deleteComplete()
+                do{
+                    let realm = try Realm()
+                    if let contact = realm.object(ofType: Contact.self, forPrimaryKey: id){
+                        realm.beginWrite()
+                        realm.delete(contact)
+                        try realm.commitWrite()
+                        delegate.deleteComplete()
+                    }
+                }catch{
+                    print("deleteItem error")
                 }
             }
         }
@@ -165,36 +190,38 @@ class RealmUtils{
     func saveItem(contactVM: ContactViewModel, delegate: RealmUtilSaveDeleteDelegate, isNew: Bool){
         DispatchQueue.global().async {
             autoreleasepool {
-                var contact: Contact = Contact()
-                contact = contact.fromContactViewModel(contactVM: contactVM)
-                let realm = try! Realm()
-                realm.beginWrite()
-                if !isNew, let contactFound = realm.object(ofType: Contact.self, forPrimaryKey: contactVM.primaryKey){
-                    contactFound.firstname = contact.firstname
-                    contactFound.lastname = contact.lastname
-                    contactFound.dateOfBirth = contact.dateOfBirth
-                    
-                    contactFound.emails?.removeAll()
-                    contactFound.emails?.append(objectsIn:  Array(contactVM.emails.filter{ !$0.isEmpty } ).map { emailItem in
-                        return EmailModel(emailText: emailItem)
-                    })
-                    
-                    contactFound.phoneNumbers?.removeAll()
-                    contactFound.phoneNumbers?.append(objectsIn:  Array(contactVM.phoneNumbers.filter{ !$0.isEmpty } ).map { phoneItem in
-                        return PhoneNumberModel(phoneNumText: phoneItem)
-                    })
-                    
-                    contactFound.addresses?.removeAll()
-                    contactFound.addresses?.append(objectsIn:  Array(contactVM.addresses.filter{ !$0.isEmpty } ).map { addItem in
-                        return AddressModel(addText: addItem)
-                    })
-                    
-                    
-                    realm.add(contactFound)
-                }else{
-                    realm.add(contact)
+                do{
+                    var contact: Contact = Contact()
+                    contact = contact.fromContactViewModel(contactVM: contactVM)
+                    let realm = try Realm()
+                    realm.beginWrite()
+                    if !isNew, let contactFound = realm.object(ofType: Contact.self, forPrimaryKey: contactVM.primaryKey){
+                        contactFound.firstname = contact.firstname
+                        contactFound.lastname = contact.lastname
+                        contactFound.dateOfBirth = contact.dateOfBirth
+                        
+                        contactFound.emails?.removeAll()
+                        contactFound.emails?.append(objectsIn:  Array(contactVM.emails.filter{ !$0.isEmpty } ).map { emailItem in
+                            return EmailModel(emailText: emailItem)
+                        })
+                        
+                        contactFound.phoneNumbers?.removeAll()
+                        contactFound.phoneNumbers?.append(objectsIn:  Array(contactVM.phoneNumbers.filter{ !$0.isEmpty } ).map { phoneItem in
+                            return PhoneNumberModel(phoneNumText: phoneItem)
+                        })
+                        
+                        contactFound.addresses?.removeAll()
+                        contactFound.addresses?.append(objectsIn:  Array(contactVM.addresses.filter{ !$0.isEmpty } ).map { addItem in
+                            return AddressModel(addText: addItem)
+                        })
+                        realm.add(contactFound)
+                    }else{
+                        realm.add(contact)
+                    }
+                    try realm.commitWrite()
+                }catch{
+                    print("Error saveItem")
                 }
-                try! realm.commitWrite()
                 delegate.saveComplete()
             }
         }

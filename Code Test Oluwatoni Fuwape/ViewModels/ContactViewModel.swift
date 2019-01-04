@@ -67,24 +67,34 @@ extension ContactViewModel {
     }
     
     func hasRequiredData()-> Bool{
-        return !trimText(text: firstname).isEmpty && !trimText(text: lastname).isEmpty && !emails.isEmpty && !phoneNumbers.isEmpty && !dOB.isEmpty
+        let filteredEmails = ContactViewModel.cleanList(items: self.emails)
+        let filteredPhoneNums = ContactViewModel.cleanList(items: self.phoneNumbers)
+        return !ContactViewModel.trimText(text: firstname).isEmpty && !ContactViewModel.trimText(text: lastname).isEmpty && !filteredEmails.isEmpty && !filteredPhoneNums.isEmpty && !dOB.isEmpty
     }
     
     func isSame(newContactVM: ContactViewModel)-> Bool{
         return newContactVM.firstname == self.firstname
             && newContactVM.lastname == self.lastname
             && newContactVM.dOB == self.dOB
-            && sameLists(itemsI: self.emails, itemsII: newContactVM.emails)
-            && sameLists(itemsI: self.phoneNumbers, itemsII: newContactVM.phoneNumbers)
-            && sameLists(itemsI: self.addresses, itemsII: newContactVM.addresses)
+            && ContactViewModel.sameLists(itemsI: self.emails, itemsII: newContactVM.emails)
+            && ContactViewModel.sameLists(itemsI: self.phoneNumbers, itemsII: newContactVM.phoneNumbers)
+            && ContactViewModel.sameLists(itemsI: self.addresses, itemsII: newContactVM.addresses)
     }
     
-    func sameLists(itemsI: [String], itemsII: [String]) -> Bool {
-        return itemsI.filter{ !$0.isEmpty } == itemsII.filter{ !$0.isEmpty }
+    // Compares two lists of strings list
+    static func sameLists(itemsI: [String], itemsII: [String]) -> Bool {
+        return cleanList(items: itemsI) == cleanList(items: itemsII)
     }
     
+    // Remove empty values from strings list
+    static func cleanList(items: [String]) -> [String]{
+        var itemsUpdate =  items.map(ContactViewModel.trimText)
+        itemsUpdate = items.filter{ !$0.isEmpty }
+        return itemsUpdate
+    }
     
-    func trimText(text: String) -> String{
+    // Remove whitespace and lines from text
+    static func trimText(text: String) -> String{
         return text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
