@@ -30,6 +30,9 @@ class UpdateContactViewController: KeyboardListenerVC{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if isNewContact{
+            contactVM.primaryKey = NSUUID().uuidString
+        }
         contactModel = contactModel.fromContactViewModel(contactVM: contactVM)
         initialContactVM = contactVM
         

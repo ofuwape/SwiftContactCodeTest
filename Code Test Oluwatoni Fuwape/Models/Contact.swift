@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class Contact: Object{
+    
     @objc dynamic var firstname: String? = ""
     @objc dynamic var lastname: String? = ""
     @objc dynamic var dateOfBirth: Date? = nil
@@ -22,7 +23,7 @@ class Contact: Object{
     override static func primaryKey() -> String? {
         return "id"
     }
-    
+
     func fromContactViewModel(contactVM: ContactViewModel) -> Contact{
         self.firstname = ContactViewModel.trimText(text: contactVM.firstname)
         self.lastname = ContactViewModel.trimText(text: contactVM.lastname)

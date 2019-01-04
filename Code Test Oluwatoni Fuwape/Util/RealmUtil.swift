@@ -193,6 +193,9 @@ class RealmUtils{
                 do{
                     var contact: Contact = Contact()
                     contact = contact.fromContactViewModel(contactVM: contactVM)
+                    if contact.id.isEmpty{
+                        contact.id = NSUUID().uuidString //catch issues with empty IDs
+                    }
                     let realm = try Realm()
                     realm.beginWrite()
                     if !isNew, let contactFound = realm.object(ofType: Contact.self, forPrimaryKey: contactVM.primaryKey){
